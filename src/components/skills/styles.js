@@ -40,18 +40,6 @@ export const Description = styled.p`
     -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
     column-count: 2;
-
-
-`;
-export const WrapperSkills = styled.div`
-    width: 100%;
-    margin-top: 35px;
-    column-count: 3;
-`;
-export const Skills = styled.div`
-    width: 100%;
-    margin-right: 50px;
-    margin-bottom: 20px;
 `;
 export const Progress = styled.div`
     height: 20px;
@@ -63,15 +51,12 @@ export const Progress = styled.div`
     color: ${(props) => props.theme.colors.primary};
     text-align: center;
     font-weight: 700;
-
-    
 `;
-export const WrapperProgress = styled.div`
+
+export const WrapperSkills = styled.div`
     width: 100%;
-    border-radius: 10px;
-    background-color: #FFF;
-    margin-top: 10px;
-    height: 20px;
+    margin-top: 35px;
+    column-count: 3;
 
     ${Progress}:nth-child(1) {
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
@@ -91,6 +76,19 @@ export const WrapperProgress = styled.div`
     ${Progress}:nth-child(6) {
         background:  linear-gradient(90deg, rgba(223,22,90,1) 0%, rgba(154,0,255,1) 100%);
     };
+`;
+export const Skills = styled.div`
+    width: 100%;
+    margin-right: 50px;
+    margin-bottom: 20px;
+`;
+export const WrapperProgress = styled.div`
+    width: 100%;
+    border-radius: 10px;
+    background-color: #FFF;
+    margin-top: 10px;
+    height: 20px;
+
 `;
 export const FutureSkillsContainer = styled.ul`
     display: flex;
