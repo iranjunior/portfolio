@@ -5,15 +5,15 @@ import {
   Container, Title, Menu, Item, TextButton, Button, WrapperMenu, WrapperButton,
 } from './styles';
 
-const Nav = () => (
+const Nav = ({ history, match }) => (
   <Container>
     <WrapperMenu>
       <Title>Iran Junior</Title>
       <Menu>
-        <Item active>
+        <Item onClick={() => history.push('/')} active={match.path === '/'}>
           Sobre
         </Item>
-        <Item>
+        <Item onClick={() => history.push('/skills')} active={match.path === '/skills'}>
           Habilidades
         </Item>
         <Item>

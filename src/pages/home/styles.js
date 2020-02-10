@@ -9,5 +9,7 @@ export const Container = styled.div`
 export const Section = styled.section`
   height: 85%;
   width: -webkit-fill-available;
- background-color: #F5F0F0;
+  background-color: #F5F0F0;
+  display: flex;
+
 `;
