@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { MdVerticalAlignBottom } from 'react-icons/md';
 
 import {
@@ -43,4 +44,14 @@ const Nav = ({ history, match }) => (
     </WrapperButton>
   </Container>
 );
+
+Nav.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+  match: PropTypes.shape({
+    path: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 export default Nav;

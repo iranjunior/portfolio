@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Container, Summary, Name, Description, WrapperSkills, Skills, Progress, WrapperProgress, Title, FutureSkillsContainer, FutureSkills,
+  Container, Summary, Name, Description, WrapperSkills, Skills, Title, FutureSkillsContainer, FutureSkills,
 } from './styles';
 
 const About = () => (
@@ -20,75 +20,30 @@ const About = () => (
     <WrapperSkills>
       <Skills>
         ReactJS
-        <WrapperProgress>
-          <Progress value={80}>
-            80%
-          </Progress>
-        </WrapperProgress>
       </Skills>
       <Skills>
         React Native
-        <WrapperProgress>
-          <Progress value={60}>
-            60%
-          </Progress>
-        </WrapperProgress>
       </Skills>
       <Skills>
         Rest
-        <WrapperProgress>
-          <Progress value={100}>
-            100%
-          </Progress>
-        </WrapperProgress>
       </Skills>
       <Skills>
         GraphQL
-        <WrapperProgress>
-          <Progress value={80}>
-            80%
-          </Progress>
-        </WrapperProgress>
       </Skills>
       <Skills>
         Websockets
-        <WrapperProgress>
-          <Progress value={100}>
-            100%
-          </Progress>
-        </WrapperProgress>
       </Skills>
       <Skills>
         StoryBooks
-        <WrapperProgress>
-          <Progress value={40}>
-            40%
-          </Progress>
-        </WrapperProgress>
       </Skills>
       <Skills>
         SEO
-        <WrapperProgress>
-          <Progress value={100}>
-            100%
-          </Progress>
-        </WrapperProgress>
       </Skills>
       <Skills>
         PWA
-        <WrapperProgress>
-          <Progress value={80}>
-            80%
-          </Progress>
-        </WrapperProgress>
       </Skills>
       <Skills>
         SPA
-        <WrapperProgress>
-          <Progress value={100}>
-            100%
-          </Progress>
-        </WrapperProgress>
       </Skills>
     </WrapperSkills>
     <Title>
