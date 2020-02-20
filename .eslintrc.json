@@ -20,6 +20,12 @@
     "plugins": [
         "react"
     ],
-    "rules": {
-    }
+    "overrides": [{
+        "files":["./src/**/*.stories.js"],
+        "rules": {
+            "import/no-extraneous-dependencies": "off",
+            "react/jsx-filename-extension": "off"
+        }
+    }],
+    "rules": {}
 }

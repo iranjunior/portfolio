@@ -1,9 +1,10 @@
 export default {
-  title: 'light',
+  name: 'dark',
+  base: 'dark',
 
   colors: {
-    primary: '#FFF',
-    secondary: '#100F3A',
+    primary: '#100F3A',
+    secondary: '#FFF',
     tertiary: '#8583E1',
   },
   fontSize: {
