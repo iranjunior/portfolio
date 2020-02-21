@@ -1,5 +1,6 @@
 export default {
-  title: 'light',
+  name: 'light',
+  base: 'light',
 
   colors: {
     primary: '#FFF',

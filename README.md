@@ -1,4 +1,4 @@
-![](https://github.com/iranjunior/portifolio/src/assets/name.png)
+![](https://raw.githubusercontent.com/iranjunior/portfolio/master/src/assets/name.png)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a0d30539-d122-4383-a920-d0515c3bbd5e/deploy-status)](https://app.netlify.com/sites/iranjunior/deploys)
 
 ## Available Scripts
