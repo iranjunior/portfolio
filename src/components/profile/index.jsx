@@ -12,7 +12,7 @@ import {
 const Profile = () => (
   <Container>
     <Header>
-      <Image src="https://avatars1.githubusercontent.com/u/44737846?v=4" />
+      <Image alt="foto do iran" src="https://avatars1.githubusercontent.com/u/44737846?v=4" />
       <WrapperButton>
         <TextButton>
           Click aqui para baixar meu curriculo

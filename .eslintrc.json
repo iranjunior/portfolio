@@ -4,7 +4,8 @@
         "es6": true
     },
     "extends": [
-        "airbnb"
+        "airbnb",
+        "plugin:jsx-a11y/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -18,7 +19,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "jsx-a11y"
     ],
     "overrides": [{
         "files":["./src/**/*.stories.js"],
@@ -27,5 +29,6 @@
             "react/jsx-filename-extension": "off"
         }
     }],
-    "rules": {}
+    "rules": {
+    }
 }

@@ -6,15 +6,10 @@ export default {
   title: 'Nav',
 };
 const mockHistory = {
-  push: (route) => action(route),
+  push: action('route'),
 };
 const mockMatch = {
   path: '/',
 };
 
-const mockMatchSkills = {
-  path: '/skills',
-};
-
-export const MenuDefault = () => <Nav history={mockHistory} match={mockMatch} />;
-export const MenuSkills = () => <Nav history={mockHistory} match={mockMatchSkills} />;
+export const Default = () => <Nav history={mockHistory} match={mockMatch} />;
