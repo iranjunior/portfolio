@@ -42,7 +42,7 @@ const About = () => (
         Foco
       </Strength>
       <Strength>
-        Competição
+        Estudioso
       </Strength>
       <Strength>
         Realização

@@ -17,11 +17,11 @@ const Nav = ({ history, match }) => (
         <Item onClick={() => history.push('/skills')} active={match.path === '/skills'}>
           Habilidades
         </Item>
-        <Item>
-          Serviços
-        </Item>
-        <Item>
+        <Item onClick={() => history.push('/formation')} active={match.path === '/formation'}>
           Formação
+        </Item>
+        {/*  <Item>
+          Serviços
         </Item>
         <Item>
           Portifolio
@@ -31,7 +31,7 @@ const Nav = ({ history, match }) => (
         </Item>
         <Item>
           Contato
-        </Item>
+        </Item> */}
       </Menu>
     </WrapperMenu>
     <WrapperButton>
