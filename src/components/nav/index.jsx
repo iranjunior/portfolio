@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { MdVerticalAlignBottom } from 'react-icons/md';
 
@@ -54,4 +54,4 @@ Nav.propTypes = {
   }).isRequired,
 };
 
-export default Nav;
+export default memo(Nav);

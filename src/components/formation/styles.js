@@ -16,6 +16,9 @@ export const Card = styled.div`
     display: flex;
     flex-direction: column;
     padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px ${(props) => props.theme.colors.tertiary};
+
 `;
 export const CardHeader = styled.div`
     flex-direction: column;
@@ -79,30 +82,4 @@ export const Description = styled.p`
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
 
 
-`;
-export const WrapperStrength = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 35px;
-`;
-export const Strength = styled.div`
-    background-color: ${(props) => props.theme.colors.primary};
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: ${(props) => props.theme.colors.secondary};
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 500ms ease;
-
-    :hover{
-        transform: scale(1.1, 1.1);
-        box-shadow: 0px 10px 13px -7px ${(props) => props.theme.colors.tertiary}, 
-                    0px 0px 43px 19px ${(props) => props.theme.colors.primary};
-        font-size: 22px;
-    }
 `;

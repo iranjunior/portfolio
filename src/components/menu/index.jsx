@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -46,4 +46,4 @@ MenuComponenet.propTypes = {
   }).isRequired,
 };
 
-export default MenuComponenet;
+export default memo(MenuComponenet);

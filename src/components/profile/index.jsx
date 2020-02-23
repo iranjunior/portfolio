@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   MdBorderColor, MdLocationOn, MdStarBorder, MdEmail, MdPhone, MdDesktopWindows,
   MdVerticalAlignBottom,
@@ -73,4 +73,4 @@ const Profile = () => (
     </Content>
   </Container>
 );
-export default Profile;
+export default memo(Profile);

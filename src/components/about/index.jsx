@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Container, Summary, Title, Name, Description, WrapperStrength, Strength,
+  Container, Summary, Title, Name, Description, WrapperStrength, Strength, Front, Back,
 } from './styles';
 
 const About = () => (
@@ -36,19 +36,49 @@ const About = () => (
     </Title>
     <WrapperStrength>
       <Strength>
-        Positividade
+        <Front>
+          Positividade
+        </Front>
+        <Back>
+          Sou uma pessoa de pensamento positvo que não cansa
+          no primeiro não.
+        </Back>
       </Strength>
       <Strength>
-        Foco
+        <Front>
+          Foco
+        </Front>
+        <Back>
+          Sou uma pessoa de pensamento positvo que não cansa
+          no primeiro não.
+        </Back>
       </Strength>
       <Strength>
-        Estudioso
+        <Front>
+          Estudioso
+        </Front>
+        <Back>
+          Sou uma pessoa de pensamento positvo que não cansa
+          no primeiro não.
+        </Back>
       </Strength>
       <Strength>
-        Realização
+        <Front>
+          Realização
+        </Front>
+        <Back>
+          Sou uma pessoa de pensamento positvo que não cansa
+          no primeiro não.
+        </Back>
       </Strength>
       <Strength>
-        Futurista
+        <Front>
+          Futurista
+        </Front>
+        <Back>
+          Sou uma pessoa de pensamento positvo que não cansa
+          no primeiro não.
+        </Back>
       </Strength>
     </WrapperStrength>
   </Container>
