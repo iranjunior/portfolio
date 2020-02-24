@@ -1,37 +1,25 @@
 import React, { memo } from 'react';
-import PropTypes from 'prop-types';
 import { MdVerticalAlignBottom } from 'react-icons/md';
+import { redirect, isMyRoute } from './services';
+
+import Routes from '../../routes';
 
 import {
   Container, Title, Menu, Item, TextButton, Button, WrapperMenu, WrapperButton,
 } from './styles';
 
-const Nav = ({ history, match }) => (
+const Nav = () => (
   <Container>
     <WrapperMenu>
       <Title>Iran Junior</Title>
       <Menu>
-        <Item onClick={() => history.push('/')} active={match.path === '/'}>
-          Sobre
-        </Item>
-        <Item onClick={() => history.push('/skills')} active={match.path === '/skills'}>
-          Habilidades
-        </Item>
-        <Item onClick={() => history.push('/formation')} active={match.path === '/formation'}>
-          Formação
-        </Item>
-        <Item onClick={() => history.push('/portfolio')} active={match.path === '/portfolio'}>
-          Portifolio
-        </Item>
-        {/* <Item>
-          Portifolio
-        </Item>
-        <Item>
-          Testemunhos
-        </Item>
-        <Item>
-          Contato
-        </Item> */}
+        {
+          Routes.map((route) => (
+            <Item onClick={() => redirect(route.path)} active={isMyRoute(route.path)}>
+              {route.nav}
+            </Item>
+          ))
+        }
       </Menu>
     </WrapperMenu>
     <WrapperButton>
@@ -45,13 +33,5 @@ const Nav = ({ history, match }) => (
   </Container>
 );
 
-Nav.propTypes = {
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
-  match: PropTypes.shape({
-    path: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default memo(Nav);

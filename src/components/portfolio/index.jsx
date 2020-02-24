@@ -14,7 +14,7 @@ const Portfolio = () => (
     <Name>Portfolio</Name>
     <CardZone>
       {data.map((repo) => (
-        <Card key={repo.name} data={repo} />
+        <Card key={repo.name} type="portfolio" data={repo} />
       ))}
     </CardZone>
   </Container>

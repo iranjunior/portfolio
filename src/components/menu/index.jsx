@@ -1,11 +1,12 @@
 import React, { useState, memo } from 'react';
-import PropTypes from 'prop-types';
+import Routes from '../../routes';
 
 import {
   Container, Title, Menu, Dropdown, Item, WrapperMenu,
 } from './styles';
+import { redirect, isMyRoute } from './services';
 
-function MenuComponenet({ history, match }) {
+function MenuComponenet() {
   const [active, setActive] = useState('hidden');
 
   const toggleDropdown = () => {
@@ -17,17 +18,13 @@ function MenuComponenet({ history, match }) {
         <Title>Iran Junior</Title>
         <Menu active={active}>
           <Dropdown>
-            <Item onClick={() => history.push('/')} active={match.path === '/'}>
-              Sobre
-            </Item>
-            <Item onClick={() => history.push('/skills')} active={match.path === '/skills'}>
-              Habilidades
-            </Item>
-            <Item>Serviços</Item>
-            <Item> Formação</Item>
-            <Item>Portifolio</Item>
-            <Item>Testemunhos</Item>
-            <Item>Contato</Item>
+            {
+              Routes.map((route) => (
+                <Item onClick={() => redirect(route.path)} active={isMyRoute(route.path)}>
+                  {route.nav}
+                </Item>
+              ))
+            }
             <Item type="blank" />
             <Item onClick={toggleDropdown}>Menu</Item>
           </Dropdown>
@@ -36,14 +33,5 @@ function MenuComponenet({ history, match }) {
     </Container>
   );
 }
-
-MenuComponenet.propTypes = {
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
-  match: PropTypes.shape({
-    path: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default memo(MenuComponenet);
