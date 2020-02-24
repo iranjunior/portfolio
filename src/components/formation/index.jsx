@@ -5,7 +5,7 @@ import {
 } from './styles';
 import { toggleActive } from './serivces';
 
-const About = () => {
+const Portfolio = () => {
   const [activeContent, setActiveContent] = useState(false);
 
   return (
@@ -59,4 +59,4 @@ const About = () => {
     </Container>
   );
 };
-export default About;
+export default Portfolio;

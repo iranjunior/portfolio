@@ -20,10 +20,10 @@ const Nav = ({ history, match }) => (
         <Item onClick={() => history.push('/formation')} active={match.path === '/formation'}>
           Formação
         </Item>
-        {/*  <Item>
-          Serviços
+        <Item onClick={() => history.push('/portfolio')} active={match.path === '/portfolio'}>
+          Portifolio
         </Item>
-        <Item>
+        {/* <Item>
           Portifolio
         </Item>
         <Item>
