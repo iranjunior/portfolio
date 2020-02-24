@@ -5,7 +5,6 @@ export const Container = styled.div`
     width: 75%;
     margin: 50px;
     flex-direction: column;
-    padding-right: 10px;
 `;
 
 export const Title = styled.h2`

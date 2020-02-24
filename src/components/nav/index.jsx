@@ -1,37 +1,38 @@
 import React, { memo } from 'react';
-import PropTypes from 'prop-types';
 import { MdVerticalAlignBottom } from 'react-icons/md';
+import { redirect, isMyRoute } from './services';
+
 
 import {
   Container, Title, Menu, Item, TextButton, Button, WrapperMenu, WrapperButton,
 } from './styles';
 
-const Nav = ({ history, match }) => (
+const Nav = () => (
   <Container>
     <WrapperMenu>
       <Title>Iran Junior</Title>
       <Menu>
-        <Item onClick={() => history.push('/')} active={match.path === '/'}>
+        <Item onClick={() => redirect('')} active={isMyRoute('')}>
           Sobre
         </Item>
-        <Item onClick={() => history.push('/skills')} active={match.path === '/skills'}>
+        <Item onClick={() => redirect('skills')} active={isMyRoute('skills')}>
           Habilidades
         </Item>
-        <Item onClick={() => history.push('/formation')} active={match.path === '/formation'}>
+        <Item onClick={() => redirect('formation')} active={isMyRoute('formation')}>
           Formação
         </Item>
-        <Item onClick={() => history.push('/portfolio')} active={match.path === '/portfolio'}>
+        <Item onClick={() => redirect('portfolio')} active={isMyRoute('portfolio')}>
           Portifolio
         </Item>
         {/* <Item>
-          Portifolio
+          Palestras
         </Item>
         <Item>
-          Testemunhos
-        </Item>
+          Blog
+        </Item> */}
         <Item>
           Contato
-        </Item> */}
+        </Item>
       </Menu>
     </WrapperMenu>
     <WrapperButton>
@@ -45,13 +46,5 @@ const Nav = ({ history, match }) => (
   </Container>
 );
 
-Nav.propTypes = {
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
-  match: PropTypes.shape({
-    path: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default memo(Nav);

@@ -10,45 +10,23 @@ export const CardZone = styled.div`
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-`;
-export const Card = styled.div`
-    width: 80%;
-    height: auto;
-    background-color: ${(props) => props.theme.colors.primary};
-    margin-top: 30px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
     padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 5px 5px ${(props) => props.theme.colors.tertiary};
 
-`;
-export const Reference = styled.label`
-    margin: 10px 0;
-`;
-
-export const Links = styled.a`
-    font-weight: 300;
-    margin-top: 20px;
-    :hover{
-        cursor: pointer;
-        text-decoration: underline;
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F5F0F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: ${(props) => props.theme.colors.secondary};
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${(props) => props.theme.colors.tertiary};
     }
 `;
-export const References = styled.div`
-    flex-direction: column;
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 10px 0;
-`;
 
-export const TitleCard = styled.h3``;
-export const Subtitle = styled.h4`
-    margin: 0;
-    font-weight: 200;
-`;
 export const Summary = styled.h3`
     font-size: 30px;
     font-weight: 500;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Card = styled.div`
 width: 80%;
@@ -37,4 +37,34 @@ export const Title = styled.h3``;
 export const Subtitle = styled.h4`
 margin: 0;
 font-weight: 200;
+`;
+
+export const CardHeader = styled.div`
+    flex-direction: column;
+`;
+export const Decision = styled.a`
+    font-weight: 300;
+    margin-top: 20px;
+    :hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+`;
+export const CardContent = styled.div`
+    flex-direction: column;
+    height: 0px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    ${(props) => props.active && css`
+        height: auto;
+    `}
+`;
+
+export const TitleCard = styled.h3``;
+export const DateCard = styled.h4`
+    margin: 0;
+    font-weight: 200;
+`;
+export const Content = styled.p`
+    font-weight: 400;
 `;

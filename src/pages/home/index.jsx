@@ -10,8 +10,8 @@ import { Container, Section } from './styles';
 
 const Home = ({ history, match }) => (
   <Container>
-    <Menu match={match} history={history} />
     <Nav match={match} history={history} />
+    <Menu match={match} history={history} />
     <Section>
       <Profile />
       <About />
