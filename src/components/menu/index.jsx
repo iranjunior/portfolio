@@ -1,4 +1,5 @@
 import React, { useState, memo } from 'react';
+import Routes from '../../routes';
 
 import {
   Container, Title, Menu, Dropdown, Item, WrapperMenu,
@@ -17,17 +18,13 @@ function MenuComponenet() {
         <Title>Iran Junior</Title>
         <Menu active={active}>
           <Dropdown>
-            <Item onClick={() => redirect('')} active={isMyRoute('')}>
-              Sobre
-            </Item>
-            <Item onClick={() => redirect('skills')} active={isMyRoute('skills')}>
-              Habilidades
-            </Item>
-            <Item>Serviços</Item>
-            <Item> Formação</Item>
-            <Item>Portifolio</Item>
-            <Item>Testemunhos</Item>
-            <Item>Contato</Item>
+            {
+              Routes.map((route) => (
+                <Item onClick={() => redirect(route.path)} active={isMyRoute(route.path)}>
+                  {route.nav}
+                </Item>
+              ))
+            }
             <Item type="blank" />
             <Item onClick={toggleDropdown}>Menu</Item>
           </Dropdown>

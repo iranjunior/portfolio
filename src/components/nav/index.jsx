@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { MdVerticalAlignBottom } from 'react-icons/md';
 import { redirect, isMyRoute } from './services';
 
+import Routes from '../../routes';
 
 import {
   Container, Title, Menu, Item, TextButton, Button, WrapperMenu, WrapperButton,
@@ -12,27 +13,13 @@ const Nav = () => (
     <WrapperMenu>
       <Title>Iran Junior</Title>
       <Menu>
-        <Item onClick={() => redirect('')} active={isMyRoute('')}>
-          Sobre
-        </Item>
-        <Item onClick={() => redirect('skills')} active={isMyRoute('skills')}>
-          Habilidades
-        </Item>
-        <Item onClick={() => redirect('formation')} active={isMyRoute('formation')}>
-          Formação
-        </Item>
-        <Item onClick={() => redirect('portfolio')} active={isMyRoute('portfolio')}>
-          Portifolio
-        </Item>
-        {/* <Item>
-          Palestras
-        </Item>
-        <Item>
-          Blog
-        </Item> */}
-        <Item>
-          Contato
-        </Item>
+        {
+          Routes.map((route) => (
+            <Item onClick={() => redirect(route.path)} active={isMyRoute(route.path)}>
+              {route.nav}
+            </Item>
+          ))
+        }
       </Menu>
     </WrapperMenu>
     <WrapperButton>

@@ -1,34 +1,36 @@
-import React from 'react';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
-
-import { Container, Section } from './pages/home/styles';
-import Nav from './components/nav';
-import Menu from './components/menu';
 import About from './components/about';
 import Skills from './components/skills';
-import Profile from './components/profile';
 import Formation from './components/formation';
 import Portfolio from './components/portfolio';
 
-const Routes = () => (
-  <BrowserRouter>
-    <Route path="/">
-      <Container>
-        <Nav />
-        <Menu />
-        <Section>
-          <Profile />
-          <Switch>
-            <Route path="" exact component={About} />
-            <Route path="skills" exact component={Skills} />
-            <Route path="formation" exact component={Formation} />
-            <Route path="portfolio" exact component={Portfolio} />
-          </Switch>
-        </Section>
-      </Container>
-    </Route>
-  </BrowserRouter>
-
-);
-
+const Routes = [
+  {
+    title: 'Iran Junior',
+    nav: 'Sobre',
+    path: '/',
+    exact: true,
+    component: About,
+  },
+  {
+    title: 'Iran Junior - Habilidades',
+    nav: 'Habilidades',
+    path: '/skills',
+    exact: false,
+    component: Skills,
+  },
+  {
+    title: 'Iran Junior - Formação',
+    nav: 'Formação',
+    path: '/formation',
+    exact: false,
+    component: Formation,
+  },
+  {
+    title: 'Iran Junior - Portifolio',
+    nav: 'Portifolio',
+    path: '/portfolio',
+    exact: false,
+    component: Portfolio,
+  },
+];
 export default Routes;
