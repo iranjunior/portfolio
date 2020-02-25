@@ -16,20 +16,25 @@ const About = () => (
       Descrição
     </Title>
     <Description>
-      Esse deserunt sunt elit adipisicing. Irure voluptate commodo esse amet ullamco.
-      Nulla irure reprehenderit commodo sint et quis magna excepteur.
-      Minim in dolor aliqua est sit sint ipsum ex elit irure.
+      Sou desenvolvedor Frontend, por paixão. Sou oriundo da engenharia de controle
+      e automação, e no final do curso, senti a necessidade de realizar o desenvolvimento
+      de uma aplicação Web. Tive a opção de pegar serviços prontos, mas optei por aprender
+      sobre uma area que até então era desconhecido a mim.
 
-      Magna cillum nisi et excepteur dolore fugiat magna et veniam nulla culpa.
-      Reprehenderit velit sit enim nisi consequat amet est voluptate sit proident nulla.
-      Consectetur fugiat magna cillum elit qui sit consequat enim anim laborum.
-      Magna commodo pariatur nostrud officia adipisicing esse ad duis cillum
-      et laboris nulla anim adipisicing.
-      Laboris dolor cillum nulla esse.
-      Pariatur ea ut irure officia sunt Lorem sunt incididunt
-      commodo culpa voluptate minim in laboris.
-      Laboris aliqua pariatur enim veniam id do reprehenderit
-      consequat in nisi voluptate voluptate duis.
+      Comecei estudando o basico com HTML, CSS, e PHP. Estudando apenas pelo youtube, Comecei
+      a fazer meus primeiros projetos para WEB. Como já era de se esperar foi uma tragédia só.
+      códigos, sujos, de baixa escalabilidade, e pouco performaticos. Mas continuei estudando,
+      aprendendo sempre com meus erros, e com pessoas mais qualificadas que eu.
+
+      Em meados do ano de 2018, comecei a estudar o javascript de forma mais efetiva. Conheci o
+      nodejs, e seu poder, e desde então não larguei mais. Sou completamente apaixonado por essa
+      linguagem, pela comunidade e pelas empresas que a usam. Sou desenvolvedor Frontend porque
+      tenho ainda grande apresso por telas bem feitas, com animações cativates e principalmente
+      pela experiencia que o usuario tem com a aplicação.
+
+      Hoje estudo diariamente sobre peformace no frontend, o que tem de novo, bibliotecas novas,
+      e fazer minha primeira formação em Desing ou afins. Tenho como objetivo ser um frontend melhor
+      e ser reconhecido nacional, ou mundialmente pelos meus trabalhos.
     </Description>
     <Title>
       Fortalezas
@@ -49,8 +54,7 @@ const About = () => (
           Foco
         </Front>
         <Back>
-          Sou uma pessoa de pensamento positvo que não cansa
-          no primeiro não.
+          Sou uma pessoa de objetivo claro e determinado a alcança-lo.
         </Back>
       </Strength>
       <Strength>
@@ -58,8 +62,7 @@ const About = () => (
           Estudioso
         </Front>
         <Back>
-          Sou uma pessoa de pensamento positvo que não cansa
-          no primeiro não.
+          Sou uma pessoa que está em constante aprendizado. Amo aprender coisas novas
         </Back>
       </Strength>
       <Strength>
@@ -67,8 +70,7 @@ const About = () => (
           Realização
         </Front>
         <Back>
-          Sou uma pessoa de pensamento positvo que não cansa
-          no primeiro não.
+          Sou uma pessoa que amo tarefas concluidas. Que preso pela conquista, nem que seja pequena
         </Back>
       </Strength>
       <Strength>
@@ -76,8 +78,7 @@ const About = () => (
           Futurista
         </Front>
         <Back>
-          Sou uma pessoa de pensamento positvo que não cansa
-          no primeiro não.
+          Sou uma pessoa que pensa no futuro, e em como minhas ações pode impacta-lo.
         </Back>
       </Strength>
     </WrapperStrength>

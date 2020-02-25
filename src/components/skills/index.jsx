@@ -1,4 +1,5 @@
 import React from 'react';
+import { redirect } from './services';
 
 import {
   Container, Summary, Name, Description, WrapperSkills, Skills, Title, FutureSkillsContainer, FutureSkills,
@@ -13,36 +14,41 @@ const About = () => (
       Habilidades
     </Name>
     <Description>
-      Esse deserunt sunt elit adipisicing. Irure voluptate commodo esse amet ullamco. Nulla irure reprehenderit commodo sint et quis magna excepteur. Minim in dolor aliqua est sit sint ipsum ex elit irure.
-
-      Magna cillum nisi et excepteur dolore fugiat magna et veniam nulla culpa. Reprehenderit velit sit enim nisi consequat amet est voluptate sit proident nulla. Consectetur fugiat magna cillum elit qui sit consequat enim anim laborum. Magna commodo pariatur nostrud officia adipisicing esse ad duis cillum et laboris nulla anim adipisicing. Laboris dolor cillum nulla esse. Pariatur ea ut irure officia sunt Lorem sunt incididunt commodo culpa voluptate minim in laboris. Laboris aliqua pariatur enim veniam id do reprehenderit consequat in nisi voluptate voluptate duis.
+      No desenvolvimento frontend sempre fui focado no ReactJS. Já trabalhei brevemente
+      com o AngularJS, mas não me aprodundei no framework. Atualmente estudo para melhorar
+      meus conhecimentos no ReactJS, e React Native para desenvolvimento mobile.
+      Organizo meus estudo por fases, com objeticos e prazos, tendo em vista isso tenho
+      como meta para o meio deste ano, começar a estudar Angular. E realizar meus primeiros
+      projetos usando este framework. Até o final deste ano pretendo começar os estudo do
+      Flutter. Fazer meus primeiros aplicativos usando essa tecnologia,
+      e "deploya-la" nas respectivas lojas.
     </Description>
     <WrapperSkills>
-      <Skills>
+      <Skills onClick={() => redirect('react')}>
         ReactJS
       </Skills>
-      <Skills>
+      <Skills onClick={() => redirect('reactNative')}>
         React Native
       </Skills>
-      <Skills>
+      <Skills onClick={() => redirect('rest')}>
         Rest
       </Skills>
-      <Skills>
+      <Skills onClick={() => redirect('graphql')}>
         GraphQL
       </Skills>
-      <Skills>
+      <Skills onClick={() => redirect('websockets')}>
         Websockets
       </Skills>
-      <Skills>
+      <Skills onClick={() => redirect('storybooks')}>
         StoryBooks
       </Skills>
-      <Skills>
+      <Skills onClick={() => redirect('seo')}>
         SEO
       </Skills>
-      <Skills>
+      <Skills onClick={() => redirect('pwa')}>
         PWA
       </Skills>
-      <Skills>
+      <Skills onClick={() => redirect('spa')}>
         SPA
       </Skills>
     </WrapperSkills>
