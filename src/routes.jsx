@@ -2,7 +2,7 @@ import About from './components/about';
 import Skills from './components/skills';
 import Formation from './components/formation';
 import Portfolio from './components/portfolio';
-import Contate from './components/contate';
+import Contate from './components/contact';
 
 const Routes = [
   {
@@ -36,7 +36,7 @@ const Routes = [
   {
     title: 'Iran Junior - Contato',
     nav: 'Contato',
-    path: '/contate',
+    path: '/contact',
     exact: false,
     component: Contate,
   },

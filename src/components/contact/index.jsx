@@ -5,7 +5,7 @@ import {
   Container, Summary, Title, Name, MessageZone, Email, Message, Send, IconSend, Loadding,
 } from './styles';
 
-const About = () => {
+const Contact = () => {
   const [loadding, setLoadding] = useState(false);
 
   return (
@@ -17,9 +17,9 @@ const About = () => {
         Mensagem
       </Title>
       <MessageZone onSubmit={(event) => SendMail(event)(setLoadding)}>
-        <Name id="name" placeholder="Seu nome" type="text" />
-        <Email id="email" placeholder="Seu email" type="email" />
-        <Message id="message" placeholder="Messagem" />
+        <Name minLength={2} required id="name" placeholder="Seu nome" type="text" />
+        <Email required id="email" placeholder="Seu email" type="email" />
+        <Message minLength={10} required id="message" placeholder="Messagem" />
         <Send type="submit">
           {loadding ? 'Aguarde...' : 'Enviar'}
           <Loadding loadding={loadding} />
@@ -29,4 +29,4 @@ const About = () => {
     </Container>
   );
 };
-export default About;
+export default Contact;

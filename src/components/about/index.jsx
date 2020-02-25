@@ -16,25 +16,31 @@ const About = () => (
       Descrição
     </Title>
     <Description>
-      Sou desenvolvedor Frontend, por paixão. Sou oriundo da engenharia de controle
-      e automação, e no final do curso, senti a necessidade de realizar o desenvolvimento
+      Desenvolvedor Frontend, por paixão. Sou oriundo da engenharia de controle
+      e automação, no meio da minha graduação, senti a necessidade de realizar o desenvolvimento
       de uma aplicação Web. Tive a opção de pegar serviços prontos, mas optei por aprender
-      sobre uma area que até então era desconhecido a mim.
+      sobre coisas que até então era desconhecido a mim.
 
-      Comecei estudando o basico com HTML, CSS, e PHP. Estudando apenas pelo youtube, Comecei
-      a fazer meus primeiros projetos para WEB. Como já era de se esperar foi uma tragédia só.
-      códigos, sujos, de baixa escalabilidade, e pouco performaticos. Mas continuei estudando,
-      aprendendo sempre com meus erros, e com pessoas mais qualificadas que eu.
+      Comecei estudando o basico do desenvolviment com HTML, CSS, e PHP.
+      Estudando apenas pelo youtube, comecei
+      a fazer meus primeiros projetos para WEB, e como já era de se esperar foi uma verdadeira
+      tragédia.
+      Códigos sujos, de baixa escalabilidade, e pouco performaticos, era minha marca registrada.
+      Mas então
+      continuei estudando, sempre aprendendo com meus erros, e com pessoas mais qualificadas que eu
+      que me ajudaram na minha jornada de aprendizado.
 
       Em meados do ano de 2018, comecei a estudar o javascript de forma mais efetiva. Conheci o
       nodejs, e seu poder, e desde então não larguei mais. Sou completamente apaixonado por essa
-      linguagem, pela comunidade e pelas empresas que a usam. Sou desenvolvedor Frontend porque
+      linguagem, pela sua comunidade e pelas empresas que a usam. Sou desenvolvedor Frontend porque
       tenho ainda grande apresso por telas bem feitas, com animações cativates e principalmente
-      pela experiencia que o usuario tem com a aplicação.
+      pela experiencia que o usuario tem com a aplicação bem construida.
 
-      Hoje estudo diariamente sobre peformace no frontend, o que tem de novo, bibliotecas novas,
-      e fazer minha primeira formação em Desing ou afins. Tenho como objetivo ser um frontend melhor
-      e ser reconhecido nacional, ou mundialmente pelos meus trabalhos.
+      Hoje estudo diariamente sobre peformace no frontend, o que tem de novo na area,
+      bibliotecas novas,
+      e como será o futuro desse parte tão importante do desenvolvimento web.
+      Tenho como objetivo ser
+      um frontend melhor e ser reconhecido nacional, ou mundialmente pelo meu bom trabalho.
     </Description>
     <Title>
       Fortalezas
