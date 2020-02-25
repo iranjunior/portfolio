@@ -2,6 +2,7 @@ import About from './components/about';
 import Skills from './components/skills';
 import Formation from './components/formation';
 import Portfolio from './components/portfolio';
+import Contate from './components/contate';
 
 const Routes = [
   {
@@ -31,6 +32,13 @@ const Routes = [
     path: '/portfolio',
     exact: false,
     component: Portfolio,
+  },
+  {
+    title: 'Iran Junior - Contato',
+    nav: 'Contato',
+    path: '/contate',
+    exact: false,
+    component: Contate,
   },
 ];
 export default Routes;

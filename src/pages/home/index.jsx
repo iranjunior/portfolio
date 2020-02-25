@@ -1,8 +1,10 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-
+import { ToastContainer } from 'react-toastify';
 import { Container, Section } from './styles';
 import Routes from '../../routes';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import Nav from '../../components/nav';
 import Menu from '../../components/menu';
@@ -10,7 +12,7 @@ import Profile from '../../components/profile';
 
 const Home = () => (
   <BrowserRouter>
-    <Container>
+    <Container id="home">
       <Nav />
       <Menu />
       <Section>
@@ -27,6 +29,7 @@ const Home = () => (
             ))
           }
         </Switch>
+        <ToastContainer />
       </Section>
     </Container>
   </BrowserRouter>

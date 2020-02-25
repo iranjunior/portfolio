@@ -50,7 +50,7 @@ export const Menu = styled.div`
     transition: all 200ms ease;
     display: flex;
     align-items: center;
-    transform: translateY(${(props) => (props.active === 'hidden' ? '-30px' : '280px')});
+    transform: translateY(${(props) => (props.active === 'hidden' ? '-70px' : '280px')});
 
 `;
 export const Dropdown = styled.ul`
