@@ -21,7 +21,7 @@ Este é o repositório do projeto meu site pessoal, que pode ser acesso pelo lin
 
 ## Desempenho desse site 
 
-<iframe src="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https://iranjunior.netlify.com/" width="100%" height="500px"></iframe>
+![](https://raw.githubusercontent.com/iranjunior/portfolio/master/src/assets/peformace.png)
 
 
 ## Caracteristicas
