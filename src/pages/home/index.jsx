@@ -11,12 +11,12 @@ import Menu from '../../components/menu';
 import Profile from '../../components/profile';
 
 const Home = () => (
-  <BrowserRouter>
-    <Container id="home">
-      <Nav />
-      <Menu />
-      <Section>
-        <Profile />
+  <Container id="home">
+    <Nav />
+    <Menu />
+    <Section>
+      <Profile />
+      <BrowserRouter>
         <Switch>
           {
             Routes.map((route) => (
@@ -29,10 +29,10 @@ const Home = () => (
             ))
           }
         </Switch>
-        <ToastContainer />
-      </Section>
-    </Container>
-  </BrowserRouter>
+      </BrowserRouter>
+      <ToastContainer />
+    </Section>
+  </Container>
 
 );
 
