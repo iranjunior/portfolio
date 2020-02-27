@@ -20,7 +20,11 @@ function MenuComponenet() {
           <Dropdown>
             {
               Routes.map((route) => (
-                <Item onClick={() => redirect(route.path)} active={isMyRoute(route.path)}>
+                <Item
+                  key={route.path}
+                  onClick={() => redirect(route.path)}
+                  active={isMyRoute(route.path)}
+                >
                   {route.nav}
                 </Item>
               ))
