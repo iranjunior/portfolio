@@ -1,5 +1,4 @@
 ![](https://raw.githubusercontent.com/iranjunior/portfolio/master/src/assets/name.png)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a0d30539-d122-4383-a920-d0515c3bbd5e/deploy-status)](https://app.netlify.com/sites/iranjunior/deploys)
 
 # Site Pessoal 
 
@@ -30,6 +29,7 @@ Este é o repositório do projeto meu site pessoal, que pode ser acesso pelo lin
 - Testes automatizado com [Jest](https://jestjs.io/)
 - Organização e padronização de códigos com [ESLint](https://github.com/eslint/eslint)
 - Criação e utilização de variaveis de ambiente com o [dotEnv](https://github.com/motdotla/dotenv)
+- PWA
 - Offline First
 - Responsividade
 
