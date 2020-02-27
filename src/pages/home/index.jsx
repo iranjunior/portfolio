@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { Container, Section } from './styles';
 import Routes from '../../routes';
@@ -8,27 +9,34 @@ import 'react-toastify/dist/ReactToastify.css';
 import Nav from '../../components/nav';
 import Menu from '../../components/menu';
 import Profile from '../../components/profile';
-import { switchRoute } from './service';
 
-const Home = () => {
-  const [route, setRoute] = useState(Routes[0].component);
+const switchRoute = (
+  <Switch>
+    {
+    Routes.map((route) => (
+      <Route
+        key={route.title}
+        exact={route.exact}
+        path={route.path}
+        component={route.component}
+      />
+    ))
+  }
+  </Switch>
 
-  useEffect(() => {
-    setRoute(switchRoute(window.location.pathname));
-  }, []);
+);
 
-  return (
-    <Container id="home">
-      <Nav />
-      <Menu />
-      <Section>
-        <Profile />
-        {route}
-        <ToastContainer />
-      </Section>
-    </Container>
+const Home = () => (
+  <Container id="home">
+    <Nav />
+    <Menu />
+    <Section>
+      <Profile />
+      {switchRoute}
+      <ToastContainer />
+    </Section>
+  </Container>
 
-  );
-};
+);
 
 export default Home;
