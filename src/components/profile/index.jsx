@@ -9,10 +9,12 @@ import {
   TextButton, Button, WrapperIcons, Instagram, Github, Linkedin, Medium,
 } from './styles';
 
+import profile from '../../assets/profile.jpg';
+
 const Profile = () => (
   <Container>
     <Header>
-      <Image alt="foto do iran" src="https://avatars1.githubusercontent.com/u/44737846?v=4" />
+      <Image alt="foto do iran" src={profile} />
       <WrapperButton>
         <TextButton>
           Click aqui para baixar meu curriculo
