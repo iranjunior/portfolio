@@ -8,6 +8,9 @@ export const Menu = styled.ul`
     margin: 0;
     padding: 0;
 
+    @media only screen and (max-width: 1200px) {
+        display: none;
+    }
 `;
 
 export const Item = styled.li`

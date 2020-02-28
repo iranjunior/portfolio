@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 export const redirect = (type, email) => {
   const options = {
+    site: 'https://',
     email: 'mailto:',
     medium: 'https://medium.com/',
     instagram: 'https://instagram.com/',
