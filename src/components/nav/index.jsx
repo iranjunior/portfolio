@@ -1,41 +1,28 @@
-import React, { memo } from 'react';
-import { MdVerticalAlignBottom } from 'react-icons/md';
-import { redirect, isMyRoute } from './services';
+import React from 'react';
+import { redirect, isMyRoute, getCurriculum } from './services';
 
-import Routes from '../../routes';
+import ListNav from './list';
+import Title from './title';
+import Button from './button';
 
 import {
-  Container, Title, Menu, Item, TextButton, Button, WrapperMenu, WrapperButton,
+  Container, WrapperMenu, WrapperButton,
 } from './styles';
 
 const Nav = () => (
   <Container>
     <WrapperMenu>
-      <Title>Iran Junior</Title>
-      <Menu>
-        {
-          Routes.map((route) => (
-            <Item
-              key={route.path}
-              onClick={() => redirect(route.path)}
-              active={isMyRoute(route.path)}
-            >
-              {route.nav}
-            </Item>
-          ))
-        }
-      </Menu>
+      <Title />
+      <ListNav
+        redirect={redirect}
+        isMyRoute={isMyRoute}
+      />
     </WrapperMenu>
     <WrapperButton>
-      <TextButton>
-        Click aqui para baixar meu curriculo
-        <Button>
-          <MdVerticalAlignBottom size={30} />
-        </Button>
-      </TextButton>
+      <Button getCurriculum={getCurriculum} />
     </WrapperButton>
   </Container>
 );
 
 
-export default memo(Nav);
+export default Nav;
