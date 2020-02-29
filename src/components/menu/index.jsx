@@ -1,38 +1,21 @@
-import React, { useState, memo } from 'react';
-import Routes from '../../routes';
+import React, { memo } from 'react';
+import Menu from './dropdown';
+import Title from '../nav/title';
 
 import {
-  Container, Title, Menu, Dropdown, Item, WrapperMenu,
+  Container, WrapperMenu,
 } from './styles';
 import { redirect, isMyRoute } from './services';
 
 function MenuComponenet() {
-  const [active, setActive] = useState('hidden');
-
-  const toggleDropdown = () => {
-    setActive((value) => (value === 'hidden' ? 'show' : 'hidden'));
-  };
   return (
     <Container>
       <WrapperMenu>
-        <Title>Iran Junior</Title>
-        <Menu active={active}>
-          <Dropdown>
-            {
-              Routes.map((route) => (
-                <Item
-                  key={route.path}
-                  onClick={() => redirect(route.path)}
-                  active={isMyRoute(route.path)}
-                >
-                  {route.nav}
-                </Item>
-              ))
-            }
-            <Item type="blank" />
-            <Item onClick={toggleDropdown}>Menu</Item>
-          </Dropdown>
-        </Menu>
+        <Title />
+        <Menu
+          redirect={redirect}
+          isMyRoute={isMyRoute}
+        />
       </WrapperMenu>
     </Container>
   );
