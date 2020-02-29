@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../components/profile/image';
+import Image from '../components/imageProfile';
 
 export default {
   title: 'ImageProfile',

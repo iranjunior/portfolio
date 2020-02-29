@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import Icons from '../components/profile/icons';
+import Icons from '../components/icons';
 
 export default {
   title: 'Icons',

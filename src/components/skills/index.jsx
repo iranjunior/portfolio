@@ -1,71 +1,29 @@
 import React from 'react';
-import { redirect } from './services';
+import { redirect } from '../profile/services';
+import Description from '../description';
+import Introduction from '../introduction';
+import Destak from '../destak';
+import Skills from './skills';
+import Title from '../title';
+import FutureSkills from './futureSkills';
+
+import skills from './skills/skills';
+import futureSkills from './futureSkills/futureSkills';
 
 import {
-  Container, Summary, Name, Description, WrapperSkills, Skills, Title, FutureSkillsContainer, FutureSkills,
+  Container, WrapperSkills,
 } from './styles';
 
 const About = () => (
   <Container>
-    <Summary>
-      Aqui estão as minhas
-    </Summary>
-    <Name>
-      Habilidades
-    </Name>
-    <Description>
-      No desenvolvimento frontend sempre fui focado no ReactJS. Já trabalhei brevemente
-      com o AngularJS, mas não me aprodundei no framework. Atualmente estudo para melhorar
-      meus conhecimentos no ReactJS, e React Native para desenvolvimento mobile.
-      Organizo meus estudo por fases, com objeticos e prazos, tendo em vista isso tenho
-      como meta para o meio deste ano, começar a estudar Angular. E realizar meus primeiros
-      projetos usando este framework. Até o final deste ano pretendo começar os estudo do
-      Flutter. Fazer meus primeiros aplicativos usando essa tecnologia,
-      e "deploya-la" nas respectivas lojas.
-    </Description>
+    <Introduction message="Aqui estão as minhas" />
+    <Destak message="Habilidades" />
+    <Description type="skills" />
     <WrapperSkills>
-      <Skills onClick={() => redirect('react')}>
-        ReactJS
-      </Skills>
-      <Skills onClick={() => redirect('reactNative')}>
-        React Native
-      </Skills>
-      <Skills onClick={() => redirect('rest')}>
-        Rest
-      </Skills>
-      <Skills onClick={() => redirect('graphql')}>
-        GraphQL
-      </Skills>
-      <Skills onClick={() => redirect('websockets')}>
-        Websockets
-      </Skills>
-      <Skills onClick={() => redirect('storybooks')}>
-        StoryBooks
-      </Skills>
-      <Skills onClick={() => redirect('seo')}>
-        SEO
-      </Skills>
-      <Skills onClick={() => redirect('pwa')}>
-        PWA
-      </Skills>
-      <Skills onClick={() => redirect('spa')}>
-        SPA
-      </Skills>
+      <Skills redirect={redirect} skills={skills} />
     </WrapperSkills>
-    <Title>
-      Habilidades futuras...
-    </Title>
-    <FutureSkillsContainer>
-      <FutureSkills>
-        Microfrontend
-      </FutureSkills>
-      <FutureSkills>
-        Angular
-      </FutureSkills>
-      <FutureSkills>
-        Flutter
-      </FutureSkills>
-    </FutureSkillsContainer>
+    <Title message="Habilidades futuras..." />
+    <FutureSkills futureSkills={futureSkills} />
   </Container>
 );
 export default About;

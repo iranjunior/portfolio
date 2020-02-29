@@ -1,5 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-export const redirect = (type, email) => {
+export const redirect = (type, data) => {
+  let url = '';
   const options = {
     site: 'https://',
     email: 'mailto:',
@@ -8,6 +9,11 @@ export const redirect = (type, email) => {
     github: 'https://github.com/',
     linkedin: 'https://linkedin.com/in/',
   };
-  const url = `${options[type]}${email}`;
+  if (type !== 'link') {
+    url = `${options[type]}${data}`;
+  } else {
+    url = `${data}`;
+  }
+
   window.open(url, '_blank');
 };

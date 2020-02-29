@@ -1,30 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    display: flex;
-    width: 75%;
-    margin: 50px;
-    flex-direction: column;
-`;
-
-export const Description = styled.p`
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    line-height: 1.85714;
-    font-weight: 500;
-    color: #838293;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
-    text-shadow: rgba(0,0,0,.01) 0 0 1px;
-
-
-`;
-export const WrapperStrength = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 35px;
-`;
 export const Strength = styled.div`
     background-color: ${(props) => props.theme.colors.primary};
     border-radius: 50%;

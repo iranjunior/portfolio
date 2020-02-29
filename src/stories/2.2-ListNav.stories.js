@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import ListNav from '../components/nav/list';
+import ListNav from '../components/listNav';
 
 export default {
   title: 'ListNav',

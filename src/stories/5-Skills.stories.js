@@ -1,8 +1,8 @@
 import React from 'react';
-import Skills from '../components/skills';
+import SkillsSection from '../components/skills';
 
 export default {
-  title: 'Skills',
+  title: 'SkillsSection',
 };
 
-export const Defaulf = () => <Skills />;
+export const Defaulf = () => <SkillsSection />;

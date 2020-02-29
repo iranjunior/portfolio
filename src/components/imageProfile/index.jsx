@@ -2,10 +2,10 @@ import React from 'react';
 import {
   Image, WrapperButton,
 } from './styles';
-import Button from '../../nav/button';
+import Button from '../button';
 
-import profile from '../../../assets/profile.jpg';
-import { getCurriculum } from '../../nav/services';
+import profile from '../../assets/profile.jpg';
+import { getCurriculum } from '../nav/services';
 
 const ImageComponent = () => (
   <>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import ListInformations from '../components/profile/informations';
+import ListInformations from '../components/informations';
 
 export default {
   title: 'ListInformations',

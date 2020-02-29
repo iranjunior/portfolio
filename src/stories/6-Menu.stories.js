@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import MenuDropdown from '../components/menu/dropdown';
+import MenuDropdown from '../components/menuDropdown';
 
 export default {
   title: 'MenuDropdown',

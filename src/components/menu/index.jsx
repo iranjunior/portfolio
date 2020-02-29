@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
-import Menu from './dropdown';
-import Title from '../nav/title';
+import Menu from '../menuDropdown';
+import Title from '../title';
 
 import {
   Container, WrapperMenu,
@@ -11,7 +11,7 @@ function MenuComponenet() {
   return (
     <Container>
       <WrapperMenu>
-        <Title />
+        <Title message="Iran Junior" />
         <Menu
           redirect={redirect}
           isMyRoute={isMyRoute}

@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 import { redirect } from './services';
-import Image from './image';
-import Icons from './icons';
-import ListInformations from './informations/index';
+import Image from '../imageProfile';
+import Icons from '../icons';
+import ListInformations from '../informations/index';
 
 import { Container, Header, Content } from './styles';
 

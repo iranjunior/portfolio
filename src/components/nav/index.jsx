@@ -1,9 +1,9 @@
 import React from 'react';
 import { redirect, isMyRoute, getCurriculum } from './services';
 
-import ListNav from './list';
-import Title from './title';
-import Button from './button';
+import ListNav from '../listNav';
+import Title from '../title';
+import Button from '../button';
 
 import {
   Container, WrapperMenu, WrapperButton,
@@ -12,7 +12,7 @@ import {
 const Nav = () => (
   <Container>
     <WrapperMenu>
-      <Title />
+      <Title message="Iran Junior" />
       <ListNav
         redirect={redirect}
         isMyRoute={isMyRoute}
