@@ -1,8 +1,8 @@
-import About from './components/about';
-import Skills from './components/skills';
-import Formation from './components/formation';
-import Portfolio from './components/portfolio';
-import Contate from './components/contact';
+import About from './components/composes/about';
+import Skills from './components/composes/skills';
+import Formation from './components/composes/formation';
+import Portfolio from './components/composes/portfolio';
+import Contate from './components/composes/contact';
 
 const Routes = [
   {
