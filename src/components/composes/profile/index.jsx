@@ -1,19 +1,31 @@
 import React, { memo } from 'react';
-import { redirect } from './services';
+import { redirect, keyPressAction } from '../../../services';
 import Image from '../../simples/imageProfile';
 import Icons from '../../simples/icons';
-import ListInformations from '../../simples/informations/index';
+import ListInformations from '../../simples/informations';
+
+
+import icons from '../../../constants/icons';
+import informations from '../../../constants/informations';
 
 import { Container, Header, Content } from './styles';
 
 const Profile = () => (
   <Container>
     <Header>
-      <Image />
+      <Image keyPressAction={keyPressAction} />
     </Header>
     <Content>
-      <ListInformations redirect={redirect} />
-      <Icons redirect={redirect} />
+      <ListInformations
+        redirect={redirect}
+        keyPressAction={keyPressAction}
+        informations={informations}
+      />
+      <Icons
+        redirect={redirect}
+        keyPressAction={keyPressAction}
+        icons={icons}
+      />
     </Content>
   </Container>
 );

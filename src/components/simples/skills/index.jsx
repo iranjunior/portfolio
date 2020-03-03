@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { memo } from 'react';
 import propTypes from 'prop-types';
 
 import Skill from './styles';
 
-const SkillsComponent = ({ redirect, skills }) => (
+const SkillsComponent = ({ redirect, skills, keyPressAction }) => (
   <>
     {skills.map((skill) => (
       <Skill
+        tabIndex={0}
+        aria-label={skill.skill}
         key={skill.skill}
+        onKeyPress={(event) => keyPressAction(event, redirect, skill.link.type, skill.link.url)}
         onClick={() => redirect(skill.link.type, skill.link.url)}
       >
         {skill.skill}
@@ -19,6 +22,7 @@ SkillsComponent.defaultProps = {
   skills: [],
 };
 SkillsComponent.propTypes = {
+  keyPressAction: propTypes.func.isRequired,
   redirect: propTypes.func.isRequired,
   skills: propTypes.arrayOf(propTypes.shape({
     skill: propTypes.string.isRequired,
@@ -29,4 +33,4 @@ SkillsComponent.propTypes = {
   })),
 };
 
-export default SkillsComponent;
+export default memo(SkillsComponent);

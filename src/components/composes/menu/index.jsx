@@ -4,24 +4,21 @@ import Title from '../../simples/title';
 
 import routes from '../../../routes';
 
-import {
-  Container, WrapperMenu,
-} from './styles';
-import { redirect, isMyRoute } from './services';
+import { Container, WrapperMenu } from './styles';
+import { changePath, isMyRoute, keyPressAction } from '../../../services';
 
-function MenuComponenet() {
-  return (
-    <Container>
-      <WrapperMenu>
-        <Title message="Iran Junior" />
-        <Menu
-          routes={routes}
-          redirect={redirect}
-          isMyRoute={isMyRoute}
-        />
-      </WrapperMenu>
-    </Container>
-  );
-}
+const MenuComponent = () => (
+  <Container>
+    <WrapperMenu>
+      <Title message="Iran Junior" />
+      <Menu
+        routes={routes}
+        keyPressAction={keyPressAction}
+        redirect={changePath}
+        isMyRoute={isMyRoute}
+      />
+    </WrapperMenu>
+  </Container>
+);
 
-export default memo(MenuComponenet);
+export default memo(MenuComponent);

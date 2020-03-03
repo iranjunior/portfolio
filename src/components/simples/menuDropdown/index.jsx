@@ -5,7 +5,9 @@ import {
   Menu, Dropdown, Item,
 } from './styles';
 
-const DropdownComponent = ({ routes, redirect, isMyRoute }) => {
+const DropdownComponent = ({
+  routes, redirect, isMyRoute, keyPressAction,
+}) => {
   const [active, setActive] = useState('hidden');
 
   const toggleDropdown = () => {
@@ -18,7 +20,10 @@ const DropdownComponent = ({ routes, redirect, isMyRoute }) => {
           {
               routes.map((route) => (
                 <Item
+                  tabIndex={0}
+                  aria-label={route.nav}
                   key={route.path}
+                  onKeyPress={(event) => keyPressAction(event, redirect, route.path)}
                   onClick={() => redirect(route.path)}
                   active={isMyRoute(route.path)}
                 >
@@ -46,6 +51,7 @@ DropdownComponent.propTypes = {
     component: PropTypes.element,
   })),
   redirect: PropTypes.func.isRequired,
+  keyPressAction: PropTypes.func.isRequired,
   isMyRoute: PropTypes.func.isRequired,
 };
 export default DropdownComponent;

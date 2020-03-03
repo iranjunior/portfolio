@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import Summary from './styles';
 
 const Introduction = ({ message }) => (
-  <Summary>
+  <Summary
+    aria-label={message}
+    tabIndex={0}
+  >
     {message}
   </Summary>
 );

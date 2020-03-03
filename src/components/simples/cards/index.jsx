@@ -1,26 +1,44 @@
 import React, { memo, useState } from 'react';
 
 import PropTypes from 'prop-types';
-import { toggleActive } from './services';
+import { toggleActive } from '../../../services';
 
 import {
   Card, Title, Subtitle, References, Reference, Links, CardHeader,
   CardContent, TitleCard, DateCard, Content, Decision,
 } from './styles';
 
-const Cards = ({ data, type }) => {
+const Cards = ({ data, type, keyPressAction }) => {
   const [activeContent, setActiveContent] = useState(false);
   if (type === 'portfolio') {
     return (
       <Card>
-        <Title>{data.name}</Title>
-        <Subtitle>{data.description}</Subtitle>
+        <Title
+          aria-label={data.name}
+          tabIndex={0}
+        >
+          {data.name}
+
+        </Title>
+        <Subtitle
+          aria-label={data.description}
+          tabIndex={0}
+        >
+          {data.description}
+
+        </Subtitle>
         <References>
-          <Reference>
+          <Reference
+            tabIndex={0}
+            aria-label="Repositorio"
+          >
             Repositorio:
             {' '}
             {' '}
-            <Links href={data.html_url}>
+            <Links
+              tabIndex={0}
+              href={data.html_url}
+            >
               {data.html_url}
             </Links>
           </Reference>
@@ -31,16 +49,28 @@ const Cards = ({ data, type }) => {
   return (
     <Card>
       <CardHeader>
-        <TitleCard>{data.name}</TitleCard>
+        <TitleCard
+          aria-label={data.name}
+          tabIndex={0}
+        >
+          {data.name}
+
+        </TitleCard>
         {
           data.complete ? (
-            <DateCard>
+            <DateCard
+              aria-label={`Concluido em ${data.date}`}
+              tabIndex={0}
+            >
               Concluido em
               {' '}
               {data.date}
             </DateCard>
           ) : (
-            <DateCard>
+            <DateCard
+              aria-label={`Concluir em ${data.date}`}
+              tabIndex={0}
+            >
               Concluir em
               {' '}
               {data.date}
@@ -49,16 +79,24 @@ const Cards = ({ data, type }) => {
         }
       </CardHeader>
       <CardContent active={activeContent}>
-        <Content>
+        <Content
+          aria-label={data.description}
+          tabIndex={0}
+        >
           {data.description}
         </Content>
       </CardContent>
-      <Decision onClick={() => toggleActive(setActiveContent, activeContent)}>
+      <Decision
+        tabIndex={0}
+        onKeyPress={(event) => keyPressAction(event, toggleActive, setActiveContent, activeContent)}
+        onClick={() => toggleActive(setActiveContent, activeContent)}
+      >
         {activeContent ? 'Mostrar menos...' : 'Leia mais...'}
       </Decision>
     </Card>
   );
 };
+
 
 Cards.propTypes = {
   type: PropTypes.string.isRequired,
@@ -69,6 +107,10 @@ Cards.propTypes = {
     date: PropTypes.string,
     complete: PropTypes.bool,
   }).isRequired,
+  keyPressAction: PropTypes.func.isRequired,
 };
 
+Card.defaultProps = {
+  keyPressAction: () => {},
+};
 export default memo(Cards);
