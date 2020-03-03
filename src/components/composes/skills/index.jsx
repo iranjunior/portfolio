@@ -1,5 +1,5 @@
 import React from 'react';
-import { redirect } from '../profile/services';
+import { redirect } from '../../../services';
 import Description from '../../simples/description';
 import Introduction from '../../simples/introduction';
 import Destak from '../../simples/destak';
@@ -7,8 +7,8 @@ import Skills from '../../simples/skills';
 import Title from '../../simples/title';
 import FutureSkills from '../../simples/futureSkills';
 
-import skills from '../../simples/skills/skills';
-import futureSkills from '../../simples/futureSkills/futureSkills';
+import skills from '../../../constants/skills';
+import futureSkills from '../../../constants/futureSkills';
 
 import {
   Container, WrapperSkills,

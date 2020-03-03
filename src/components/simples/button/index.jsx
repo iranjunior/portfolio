@@ -5,7 +5,10 @@ import { MdVerticalAlignBottom } from 'react-icons/md';
 import { TextButton, Button } from './styles';
 
 const ButtonComponent = ({ getCurriculum }) => (
-  <TextButton onClick={() => getCurriculum()}>
+  <TextButton
+    onKeyPress={(event) => getCurriculum(event)}
+    onClick={() => getCurriculum()}
+  >
     Click aqui para baixar meu curriculo
     <Button>
       <MdVerticalAlignBottom size={30} />

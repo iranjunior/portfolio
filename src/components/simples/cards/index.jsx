@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react';
 
 import PropTypes from 'prop-types';
-import { toggleActive } from './services';
+import { toggleActive } from '../../../services';
 
 import {
   Card, Title, Subtitle, References, Reference, Links, CardHeader,

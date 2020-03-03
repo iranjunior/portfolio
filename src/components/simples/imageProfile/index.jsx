@@ -1,13 +1,13 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import {
   Image, WrapperButton,
 } from './styles';
 import Button from '../button';
 
 import profile from '../../../assets/profile.jpg';
-import { getCurriculum } from '../../composes/nav/services';
 
-const ImageComponent = () => (
+const ImageComponent = ({ getCurriculum }) => (
   <>
     <Image alt="foto do iran" src={profile} />
     <WrapperButton>
@@ -15,4 +15,7 @@ const ImageComponent = () => (
     </WrapperButton>
   </>
 );
+ImageComponent.propTypes = {
+  getCurriculum: Proptypes.func.isRequired,
+};
 export default ImageComponent;

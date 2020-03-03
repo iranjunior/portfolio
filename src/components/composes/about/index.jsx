@@ -1,9 +1,14 @@
 import React from 'react';
+
+// Components
 import Summary from '../../simples/introduction';
 import Destak from '../../simples/destak';
 import Title from '../../simples/title';
 import Description from '../../simples/description';
 import Strengths from '../../simples/strengths';
+
+// informations
+import strengths from '../../../constants/strengths';
 
 import {
   Container, WrapperStrength,
@@ -18,7 +23,7 @@ const About = () => (
     <Description type="about" />
     <Title message="Fortalezas" />
     <WrapperStrength>
-      <Strengths />
+      <Strengths strengths={strengths} />
     </WrapperStrength>
   </Container>
 );

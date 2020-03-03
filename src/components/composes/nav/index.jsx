@@ -1,5 +1,5 @@
 import React from 'react';
-import { redirect, isMyRoute, getCurriculum } from './services';
+import { changePath, isMyRoute, getCurriculum } from '../../../services';
 
 import ListNav from '../../simples/listNav';
 import Title from '../../simples/title';
@@ -16,7 +16,7 @@ const Nav = () => (
       <Title message="Iran Junior" />
       <ListNav
         routes={routes}
-        redirect={redirect}
+        redirect={changePath}
         isMyRoute={isMyRoute}
       />
     </WrapperMenu>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import propTypes from 'prop-types';
 
 
@@ -22,4 +22,4 @@ SkillsComponent.propTypes = {
   futureSkills: propTypes.arrayOf(propTypes.string),
 };
 
-export default SkillsComponent;
+export default memo(SkillsComponent);

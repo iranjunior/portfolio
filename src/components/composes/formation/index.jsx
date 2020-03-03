@@ -8,15 +8,15 @@ import {
   Container, CardZone,
 } from './styles';
 
-import data from './data.json';
+import formations from '../../../constants/formations';
 
 const FormationComponent = () => (
   <Container>
     <Introduction message="Essas são as minhas" />
     <Destak message="Formações" />
     <CardZone>
-      {data.map((formation) => (
-        <Card key={formation.name} data={formation} type="formation" />
+      {formations.map((formation) => (
+        <Card tabIndex={0} key={formation.name} data={formation} type="formation" />
       ))}
     </CardZone>
   </Container>

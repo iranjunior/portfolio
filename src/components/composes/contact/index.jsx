@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Introduction from '../../simples/introduction';
 import Destak from '../../simples/destak';
 
-import { SendMail } from './services';
+import { SendMail } from '../../../services';
 
 import {
   Container, Name, MessageZone, Email, Message, Send, IconSend, Loadding,

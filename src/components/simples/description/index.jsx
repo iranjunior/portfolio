@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getDescriptions } from './services';
+import { getDescriptions } from '../../../services';
 import Description from './styles';
 
 const DescriptionComponent = ({ type }) => (

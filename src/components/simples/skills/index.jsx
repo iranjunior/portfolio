@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import propTypes from 'prop-types';
 
 import Skill from './styles';
@@ -29,4 +29,4 @@ SkillsComponent.propTypes = {
   })),
 };
 
-export default SkillsComponent;
+export default memo(SkillsComponent);
