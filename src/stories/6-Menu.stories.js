@@ -1,6 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import MenuDropdown from '../components/menuDropdown';
+import MenuDropdown from '../components/simples/menuDropdown';
+import routes from '../routes';
 
 export default {
   title: 'MenuDropdown',
@@ -12,13 +13,16 @@ export default {
       {storyFn()}
     </div>
   )],
+
 };
 
 const redirect = action('redirect');
 const isMyRoute = action('isMyRoute');
 
+
 export const Default = () => (
   <MenuDropdown
+    routes={routes}
     redirect={redirect}
     isMyRoute={isMyRoute}
   />
