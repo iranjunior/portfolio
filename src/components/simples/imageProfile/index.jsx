@@ -7,15 +7,16 @@ import Button from '../button';
 
 import profile from '../../../assets/profile.jpg';
 
-const ImageComponent = ({ getCurriculum }) => (
+const ImageComponent = ({ getCurriculum, keyPressAction }) => (
   <>
     <Image alt="foto do iran" src={profile} />
     <WrapperButton>
-      <Button getCurriculum={getCurriculum} />
+      <Button keyPressAction={keyPressAction} getCurriculum={getCurriculum} />
     </WrapperButton>
   </>
 );
 ImageComponent.propTypes = {
   getCurriculum: Proptypes.func.isRequired,
+  keyPressAction: Proptypes.func.isRequired,
 };
 export default ImageComponent;

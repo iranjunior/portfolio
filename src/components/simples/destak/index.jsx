@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import Destak from './styles';
 
 const DestakComponent = ({ message }) => (
-  <Destak>
+  <Destak
+    tabIndex={0}
+    aria-label={message}
+  >
     {message}
   </Destak>
 );

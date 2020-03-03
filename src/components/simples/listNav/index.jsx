@@ -5,12 +5,17 @@ import {
   Menu, Item,
 } from './styles';
 
-const ListNav = ({ routes, redirect, isMyRoute }) => (
+const ListNav = ({
+  routes, redirect, isMyRoute, keyPressAction,
+}) => (
   <Menu>
     {
        routes.map((route) => (
          <Item
+           tabIndex={0}
+           aria-label={route.nav}
            key={route.path}
+           onKeyPress={((event) => keyPressAction(event, redirect, route.path))}
            onClick={() => redirect(route.path)}
            active={isMyRoute(route.path)}
          >
@@ -35,6 +40,7 @@ ListNav.propTypes = {
   })),
   redirect: PropTypes.func.isRequired,
   isMyRoute: PropTypes.func.isRequired,
+  keyPressAction: PropTypes.func.isRequired,
 };
 
 export default memo(ListNav);

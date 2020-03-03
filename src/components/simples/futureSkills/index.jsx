@@ -8,6 +8,8 @@ const SkillsComponent = ({ futureSkills }) => (
   <Container>
     {futureSkills.map((futureSkill) => (
       <FutureSkills
+        tabIndex={0}
+        aria-label={futureSkill}
         key={futureSkill}
       >
         {futureSkill}

@@ -4,6 +4,8 @@ import Card from '../../simples/cards';
 import Introduction from '../../simples/introduction';
 import Destak from '../../simples/destak';
 
+import { keyPressAction } from '../../../services';
+
 import {
   Container, CardZone,
 } from './styles';
@@ -16,7 +18,7 @@ const FormationComponent = () => (
     <Destak message="Formações" />
     <CardZone>
       {formations.map((formation) => (
-        <Card tabIndex={0} key={formation.name} data={formation} type="formation" />
+        <Card tabIndex={0} key={formation.name} data={formation} type="formation" keyPressAction={keyPressAction} />
       ))}
     </CardZone>
   </Container>

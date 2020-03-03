@@ -1,5 +1,5 @@
 import React from 'react';
-import { redirect } from '../../../services';
+import { redirect, keyPressAction } from '../../../services';
 import Description from '../../simples/description';
 import Introduction from '../../simples/introduction';
 import Destak from '../../simples/destak';
@@ -20,7 +20,7 @@ const About = () => (
     <Destak message="Habilidades" />
     <Description type="skills" />
     <WrapperSkills>
-      <Skills redirect={redirect} skills={skills} />
+      <Skills keyPressAction={keyPressAction} redirect={redirect} skills={skills} />
     </WrapperSkills>
     <Title message="Habilidades futuras..." />
     <FutureSkills futureSkills={futureSkills} />

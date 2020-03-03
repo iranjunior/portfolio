@@ -40,10 +40,11 @@ export const redirect = (type, data) => {
 
   window.open(url, '_blank');
 };
-export const changePath = (path) => window.location.pathname = `${path}`;
+export const changePath = (path) => { window.location.pathname = `${path}`; };
 export const toggleActive = (setActived, value) => { setActived(!value); };
 export const isMyRoute = (route) => window.location.pathname === `${route}`;
-export const getCurriculum = () => console.log('Pega curriculo');
+export const keyPressAction = (event, action, ...params) => { if (event === undefined || event.key === ' ' || event.key === 'Enter') action(...params); };
+export const getCurriculum = () => { console.log('Pega curriculo'); };
 
 export const getDescriptions = (type) => type !== '' && descriptions[type];
 export const getTitles = () => {};

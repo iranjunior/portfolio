@@ -7,6 +7,7 @@ import Description from './styles';
 const DescriptionComponent = ({ type }) => (
   <Description
     aria-label={`description-${type}`}
+    tabIndex={0}
   >
     {getDescriptions(type)}
   </Description>

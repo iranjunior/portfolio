@@ -4,9 +4,12 @@ import { MdVerticalAlignBottom } from 'react-icons/md';
 
 import { TextButton, Button } from './styles';
 
-const ButtonComponent = ({ getCurriculum }) => (
+const ButtonComponent = ({ getCurriculum, keyPressAction }) => (
   <TextButton
-    onKeyPress={(event) => getCurriculum(event)}
+    role="button"
+    aria-label="Click aqui para baixar meu curriculo"
+    tabIndex={0}
+    onKeyPress={(event) => keyPressAction(event, getCurriculum)}
     onClick={() => getCurriculum()}
   >
     Click aqui para baixar meu curriculo
@@ -18,6 +21,7 @@ const ButtonComponent = ({ getCurriculum }) => (
 
 ButtonComponent.propTypes = {
   getCurriculum: PropTypes.func.isRequired,
+  keyPressAction: PropTypes.func.isRequired,
 };
 
 export default ButtonComponent;

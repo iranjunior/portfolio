@@ -1,5 +1,7 @@
 import React from 'react';
-import { changePath, isMyRoute, getCurriculum } from '../../../services';
+import {
+  changePath, isMyRoute, getCurriculum, keyPressAction,
+} from '../../../services';
 
 import ListNav from '../../simples/listNav';
 import Title from '../../simples/title';
@@ -18,10 +20,11 @@ const Nav = () => (
         routes={routes}
         redirect={changePath}
         isMyRoute={isMyRoute}
+        keyPressAction={keyPressAction}
       />
     </WrapperMenu>
     <WrapperButton>
-      <Button getCurriculum={getCurriculum} />
+      <Button getCurriculum={getCurriculum} keyPressAction={keyPressAction} />
     </WrapperButton>
   </Container>
 );

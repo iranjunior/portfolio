@@ -6,9 +6,12 @@ import {
 } from './styles';
 
 
-const InformationsComponent = ({ informations, redirect }) => (
+const InformationsComponent = ({ informations, redirect, keyPressAction }) => (
   <List>
-    <Item>
+    <Item
+      tabIndex={0}
+      aria-label="Informações Gerais"
+    >
       Informações Gerais
     </Item>
     {
@@ -23,6 +26,8 @@ const InformationsComponent = ({ informations, redirect }) => (
               {' '}
               <Information
                 link
+                onKeyPress={((event) => keyPressAction(event,
+                  redirect, information.link.type, information.link.url))}
                 onClick={() => redirect(information.link.type, information.link.url)}
               >
                 {information.information}
@@ -54,6 +59,7 @@ InformationsComponent.defaultProps = {
 
 InformationsComponent.propTypes = {
   redirect: PropTypes.func.isRequired,
+  keyPressAction: PropTypes.func.isRequired,
   informations: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
     information: PropTypes.string.isRequired,

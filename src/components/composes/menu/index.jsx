@@ -5,7 +5,7 @@ import Title from '../../simples/title';
 import routes from '../../../routes';
 
 import { Container, WrapperMenu } from './styles';
-import { changePath, isMyRoute } from '../../../services';
+import { changePath, isMyRoute, keyPressAction } from '../../../services';
 
 const MenuComponent = () => (
   <Container>
@@ -13,6 +13,7 @@ const MenuComponent = () => (
       <Title message="Iran Junior" />
       <Menu
         routes={routes}
+        keyPressAction={keyPressAction}
         redirect={changePath}
         isMyRoute={isMyRoute}
       />
