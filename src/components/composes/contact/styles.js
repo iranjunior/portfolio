@@ -16,20 +16,6 @@ export const Container = styled.div`
     margin: 50px;
     flex-direction: column;
 `;
-export const Summary = styled.h3`
-    font-size: 30px;
-    font-weight: 500;
-    color: #7a798c;
-    line-height: 0.75;
-
-`;
-export const Title = styled.h1`
-    font-size: 92px;
-    font-weight: 800;
-    color: ${(props) => props.theme.colors.secondary};
-    line-height: 0.75;
-    margin-top: 0px;
-`;
 export const MessageZone = styled.form`
     height: 100%;
     width: 100%;
@@ -58,9 +44,6 @@ export const Message = styled.textarea`
     grid-area: message;
     padding: 20px 10px;
     font-size: ${(props) => props.theme.fontSize.small};
-`;
-export const Blank = styled.div`
-    grid-area: blank;
 `;
 export const Send = styled.button`
     grid-area: submit;
