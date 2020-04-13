@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import Skills from '../components/simples/skills';
-import skills from '../components/simples/skills/skills';
+import skills from '../constants/skills';
 
 export default {
   title: 'Skills',

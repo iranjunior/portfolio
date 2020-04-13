@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import FutureSkills from '../components/simples/futureSkills';
-import futureSkills from '../components/simples/futureSkills/futureSkills';
+import futureSkills from '../constants/futureSkills';
 
 export default {
   title: 'FutureSkills',

@@ -1,17 +1,14 @@
 describe('Primeiro teste', () => {
   context('720p resolution', () => {
     beforeEach(() => {
-      // run these tests as if in a desktop
-      // browser with a 720p monitor
-      cy.viewport(1280, 720);
-    });
-    it('Deve chegar a Habilidades com sucesso', () => {
       cy.visit('http://localhost:3000/');
+    });
+
+    it('Deve chegar a Habilidades com sucesso', () => {
       cy.contains('Habilidades').click();
       cy.url().should('includes', '/skills');
     });
     it('Deve escrever uma messagem', () => {
-      cy.visit('http://localhost:3000/');
       cy.contains('Contato').click();
       cy.url().should('includes', '/contact');
       cy.get('#name').type('Fulano do Teste');
