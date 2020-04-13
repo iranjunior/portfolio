@@ -4,8 +4,6 @@ export default styled.div`
   font-size: ${(props) => props.theme.fontSize.medium};
   font-weight: 800;
   color: ${(props) => props.theme.colors.secondary};
-  margin-right: 48px;
-  margin-top: -5px;
   transition: all 200ms ease;
   display: flex;
   align-items: center;
@@ -17,4 +15,8 @@ export default styled.div`
   :focus{
     outline: 1px solid ${(props) => props.theme.colors.primary};
   }
+  @media only screen and (max-width: 400px) {
+        margin-top: 1em;
+        font-size: ${(props) => props.theme.fontSize.small};
+    }
 `;

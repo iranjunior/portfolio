@@ -12,6 +12,6 @@ export default {
     small: '16px',
     medium: '30px',
     large: '65px',
-    ExtraLarge: '92px',
+    extraLarge: '92px',
   },
 };

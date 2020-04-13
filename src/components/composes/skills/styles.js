@@ -45,6 +45,11 @@ export const WrapperSkills = styled.div`
     width: 100%;
     margin-top: 35px;
     column-count: 3;
+    @media screen and (max-width: 400px){
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
 `;
 export const Skills = styled.div`
     width: 100%;

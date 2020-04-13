@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
   @media only screen and (min-width: 1200px) {
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
-    padding: 20px;
-    position: absolute;
+    height: 100%;
+    padding: 2em;
+    }
+  @media only screen and (max-width: 700px) {
+    margin: 1em;
     }
 `;
 export const Section = styled.section`
   height: 85%;
-  width: -webkit-fill-available;
   background-color: #F5F0F0;
   display: flex;
 

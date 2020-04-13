@@ -4,6 +4,7 @@ export default createGlobalStyle`
 
     body {
       margin: 0;
+      padding:0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -14,10 +15,10 @@ export default createGlobalStyle`
     code {
       font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
-    }
+    }${'' /*
     #root {
       height: 100%;
       width: fit-content;
 
-    }
+    } */}
 `;

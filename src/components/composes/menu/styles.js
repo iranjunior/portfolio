@@ -11,6 +11,7 @@ export const Container = styled.div`
 
     @media only screen and (max-width: 1200px) {
         display: flex;
+        padding: 0;
     }
 `;
 export const WrapperMenu = styled.div`

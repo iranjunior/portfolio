@@ -11,4 +11,5 @@ export const WrapperStrength = styled.div`
     width: 100%;
     justify-content: space-around;
     margin-top: 35px;
+    flex-wrap: wrap;
 `;

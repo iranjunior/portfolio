@@ -4,7 +4,6 @@ import {
 } from 'react-icons/fa';
 
 export const Container = styled.div`
-  height: 100%;
   width: 400px;
   background-color: ${(props) => props.theme.colors.secondary};
   display: flex;
