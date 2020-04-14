@@ -16,6 +16,7 @@ box-shadow: 5px 5px ${(props) => props.theme.colors.tertiary};
 `;
 export const Reference = styled.label`
 margin: 10px 0;
+overflow-x: hidden;
 `;
 
 export const Links = styled.a`
