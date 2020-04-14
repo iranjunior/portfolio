@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export default styled.div`
   font-size: ${(props) => props.theme.fontSize.medium};
   font-weight: 800;
+  margin-right: 1em;
   color: ${(props) => props.theme.colors.secondary};
   transition: all 200ms ease;
   display: flex;

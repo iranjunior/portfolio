@@ -6,7 +6,7 @@ export default styled.div`
     justify-content: center;
     color: #ccc;
     
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1250px){
         padding: 20px;
   }
 `;

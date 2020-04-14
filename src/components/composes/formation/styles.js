@@ -5,10 +5,14 @@ export const Container = styled.div`
     width: 75%;
     margin: 50px;
     flex-direction: column;
+    @media only screen and (max-width: 1250px) {
+        width: 90%;
+        margin: 1em;
+    }
 `;
 export const CardZone = styled.div`
     width: 100%;
-    height: 100%;
+    height: 27.5em;
     overflow-y: scroll;
     padding: 20px;
 

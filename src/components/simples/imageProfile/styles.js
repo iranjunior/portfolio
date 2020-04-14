@@ -6,7 +6,7 @@ export const Image = styled.img`
 `;
 export const WrapperButton = styled.div`
     display: none;
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1250px) {
     display: flex;
     flex-direction: row;
     height: 70px;

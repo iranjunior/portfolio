@@ -15,10 +15,14 @@ export default createGlobalStyle`
     code {
       font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
-    }${'' /*
-    #root {
-      height: 100%;
-      width: fit-content;
-
-    } */}
+    }
+    input, textarea {
+      padding: 20px 10px;
+      font-size: ${(props) => props.theme.fontSize.small};
+      
+      @media only screen and (max-width: 400px) {
+          font-size: ${(props) => props.theme.fontSize.extraSmall};
+          padding: 10px;
+      }  
+    }
 `;

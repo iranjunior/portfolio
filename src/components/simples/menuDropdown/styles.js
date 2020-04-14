@@ -9,7 +9,7 @@ export const Menu = styled.div`
     align-items: center;
     transform: translateY(${(props) => (props.active === 'hidden' ? '-2.5em' : '8em')});
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1250px) {
         transform: translateY(${(props) => (props.active === 'hidden' ? '-2.5em' : '8.5em')});
     }
     @media screen and (max-width: 400px) {
