@@ -4,6 +4,7 @@ export default createGlobalStyle`
 
     body {
       margin: 0;
+      padding:0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -15,9 +16,13 @@ export default createGlobalStyle`
       font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
     }
-    #root {
-      height: 100%;
-      width: fit-content;
-
+    input, textarea {
+      padding: 20px 10px;
+      font-size: ${(props) => props.theme.fontSize.small};
+      
+      @media only screen and (max-width: 400px) {
+          font-size: ${(props) => props.theme.fontSize.extraSmall};
+          padding: 10px;
+      }  
     }
 `;

@@ -15,35 +15,59 @@ export const Container = styled.div`
     width: 75%;
     margin: 50px;
     flex-direction: column;
+    @media only screen and (max-width: 1250px) {
+        width: 90%;
+        margin: 1em;
+    }
 `;
 export const MessageZone = styled.form`
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-areas:
-    "name name email email"    
-    "message message message message" 
-    "blank blank blank submit"
-    ;   
-    grid-template-rows: 12% 70% 12%;
-    grid-template-columns: 20% 20% 30% 10%;
     justify-content: center;
-    grid-gap: 10px;
+
+    @media only screen and (min-width: 1250px) {
+        grid-template-areas:
+        "name name email email"    
+        "message message message message" 
+        "blank blank blank submit"
+        ;   
+        grid-template-rows: 12% 70% 12%;
+        grid-template-columns: 20% 20% 30% 10em;
+        grid-gap: 10px;
+    }
+    @media only screen and (max-width: 1250px) {
+        grid-template-areas:
+        "name"
+        "email"    
+        "message" 
+        "submit"
+        ;   
+        grid-template-rows: 2em 2em 10em 3em;
+        grid-template-columns: 80%;
+        grid-gap: 2em;
+    }
+    @media only screen and (max-width: 400px) {
+        grid-template-areas:
+        "name"
+        "email"    
+        "message" 
+        "submit"
+        ;   
+        grid-template-rows: 1em 1em 10em 2em;
+        grid-template-columns: 100%;
+        grid-gap: 2em;
+        justify-content: flex-start;
+    }   
 `;
 export const Name = styled.input`
     grid-area: name;
-    padding: 20px 10px;
-    font-size: ${(props) => props.theme.fontSize.small};
 `;
 export const Email = styled.input`
     grid-area: email;
-    padding: 20px 10px;
-    font-size: ${(props) => props.theme.fontSize.small};
 `;
 export const Message = styled.textarea`
     grid-area: message;
-    padding: 20px 10px;
-    font-size: ${(props) => props.theme.fontSize.small};
 `;
 export const Send = styled.button`
     grid-area: submit;
