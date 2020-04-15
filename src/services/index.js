@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import Api from './email';
 import descriptions from '../constants/descriptions';
+import Curriculum from '../assets/IranJuniorFrontEnd.pdf';
 
 export const SendMail = (event) => (setLoadding) => {
   event.preventDefault();
@@ -44,7 +45,9 @@ export const changePath = (path) => { window.location.pathname = `${path}`; };
 export const toggleActive = (setActived, value) => { setActived(!value); };
 export const isMyRoute = (route) => window.location.pathname === `${route}`;
 export const keyPressAction = (event, action, ...params) => { if (event === undefined || event.key === ' ' || event.key === 'Enter') action(...params); };
-export const getCurriculum = () => { console.log('Pega curriculo'); };
+export const getCurriculum = () => {
+  const link = document.createElement('a'); link.href = Curriculum; link.download = 'IranJuniorFrontEnd.pdf'; link.click();
+};
 
 export const getDescriptions = (type) => type !== '' && descriptions[type];
 export const getTitles = () => {};
