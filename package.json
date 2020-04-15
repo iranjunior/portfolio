@@ -29,8 +29,6 @@
     "lint": "eslint --fix ./src/",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "CHROMATIC_APP_CODE=0royt9ncuy7l chromatic",
@@ -65,7 +63,6 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "gh-pages": "^2.2.0"
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }
