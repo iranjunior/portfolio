@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { redirect, keyPressAction } from '../../../services';
+import { redirect, keyPressAction, getCurriculum } from '../../../services';
 import Image from '../../simples/imageProfile';
 import Icons from '../../simples/icons';
 import ListInformations from '../../simples/informations';
@@ -13,7 +13,7 @@ import { Container, Header, Content } from './styles';
 const Profile = () => (
   <Container>
     <Header>
-      <Image keyPressAction={keyPressAction} />
+      <Image getCurriculum={getCurriculum} keyPressAction={keyPressAction} />
     </Header>
     <Content>
       <ListInformations

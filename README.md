@@ -2,6 +2,12 @@
 
 # Site Pessoal 
 
+[![Build Status](https://travis-ci.org/iranjunior/portfolio.svg?branch=develop)](https://travis-ci.org/iranjunior/portfolio)
+[![Coverage Status](https://coveralls.io/repos/github/iranjunior/portfolio/badge.svg?branch=develop)](https://coveralls.io/github/iranjunior/portfolio?branch=develop)
+[![dependencies Status](https://david-dm.org/iranjunior/portfolio/status.svg)](https://david-dm.org/iranjunior/portfolio)
+[![devDependencies Status](https://david-dm.org/iranjunior/portfolio/dev-status.svg)](https://david-dm.org/iranjunior/portfolio?type=dev)
+![GitHub issues](https://img.shields.io/github/issues/iranjunior/portfolio)
+
 **Tabela de Conteudos**
 
  - [Sobre o projeto](#sobre-o-projeto)

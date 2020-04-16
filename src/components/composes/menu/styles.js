@@ -9,8 +9,9 @@ export const Container = styled.div`
     background: ${(props) => props.theme.colors.primary};
     transition: all 200ms ease;
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1250px) {
         display: flex;
+        padding: 0;
     }
 `;
 export const WrapperMenu = styled.div`

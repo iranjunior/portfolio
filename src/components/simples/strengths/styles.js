@@ -14,6 +14,10 @@ export const Strength = styled.div`
     transform-style: preserve-3d;
     perspective: 1000px;
     cursor: default;
+
+    @media screen and (max-width: 1000px) {
+        margin: 1em;
+    }
     :hover {
         transform: rotateX(180deg) scale(1.2, 1.2);
         box-shadow: 0px 0px 20px #FFF;
