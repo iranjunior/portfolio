@@ -11,14 +11,13 @@ describe('Test buttons', () => {
     const getCurriculumMock = jest.fn(() => {});
     const keyPressActionMock = jest.fn(() => {});
 
+
     const wrapper = render(
       decorator(<ImageProfile
         getCurriculum={getCurriculumMock}
         keyPressAction={keyPressActionMock}
-
       />),
     );
-
     expect(wrapper.getByAltText('foto do iran').getAttribute('src')).toBe('profile.jpg');
   });
 

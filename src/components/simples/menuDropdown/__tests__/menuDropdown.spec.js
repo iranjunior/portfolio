@@ -26,6 +26,25 @@ describe('Test MenuDropdown', () => {
     expect(wrapper.container.firstChild.childNodes[0].firstChild.innerHTML).toBe(routes[0].nav);
   });
 
+  it('Should render MenuDropdown with success and expanding menu', () => {
+    const keyPressActionMock = jest.fn(() => {});
+    const redirectMock = jest.fn(() => {});
+    const isMyRouteMock = jest.fn(() => {});
+
+    const wrapper = render(
+      decorator(<MenuDropdown
+        routes={routes}
+        redirect={redirectMock}
+        isMyRoute={isMyRouteMock}
+        keyPressAction={keyPressActionMock}
+      />),
+    );
+    const classname = wrapper.container.firstChild.className;
+    fireEvent.click(wrapper.container.firstChild.firstChild.lastChild);
+
+    expect(wrapper.container.firstChild.className).not.toBe(classname);
+  });
+
   it('Should render MenuDropdown with success and click to link', () => {
     const keyPressActionMock = jest.fn(() => {});
     const redirectMock = jest.fn(() => {});
