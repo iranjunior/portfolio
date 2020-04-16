@@ -5,19 +5,19 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://iranjunior.netlify.com/</loc>
+  <loc>https://iranjunior.herokuapp.com/</loc>
   <lastmod>2020-02-25T03:00:32+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>https://iranjunior.netlify.com/skills</loc>
+  <loc>https://iranjunior.herokuapp.com/skills</loc>
   <lastmod>2020-02-25T03:00:32+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 <url>
-  <loc>https://iranjunior.netlify.com/contate</loc>
+  <loc>https://iranjunior.herokuapp.com/contact</loc>
   <lastmod>2020-02-25T03:00:32+00:00</lastmod>
   <priority>0.3</priority>
 </url>
