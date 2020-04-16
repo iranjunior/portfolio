@@ -25,17 +25,37 @@
         "jsx-a11y",
         "cypress"
     ],
-    "overrides": [{
-        "files":["./src/**/*.stories.js"],
-        "rules": {
-            "import/no-extraneous-dependencies": "off",
-            "react/jsx-filename-extension": "off",
-            "cypress/no-assigning-return-values": "error",
-            "cypress/no-unnecessary-waiting": "error",
-            "cypress/assertion-before-screenshot": "warn",
-            "cypress/no-force": "warn"
+    "overrides": [
+        {
+            "files":["./src/**/*.stories.js"],
+            "rules": {
+                "import/no-extraneous-dependencies": "off",
+                "react/jsx-filename-extension": "off",
+                "cypress/no-assigning-return-values": "error",
+                "cypress/no-unnecessary-waiting": "error",
+                "cypress/assertion-before-screenshot": "warn",
+                "cypress/no-force": "warn"
+            }
+        },
+        {
+            "files": [
+                "**.spec.js", "**.stories.js"
+            ],
+            "rules": {
+                "react/jsx-filename-extension": "off",
+                "react/prop-types": "off",
+                "react/jsx-props-no-spreading": "off",
+                "import/no-extraneous-dependencies": "off"
+            }
+        }, {
+            "files": [
+                "**.jsx"
+            ],
+            "rules": {
+                "react/jsx-props-no-spreading": "off"
+            }
         }
-    }],
+    ],
     "rules": {
     }
 }

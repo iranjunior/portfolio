@@ -28,6 +28,8 @@
     "build": "react-scripts build",
     "lint": "eslint --fix ./src/",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --runInBand --coverage --no-cache --watchAll=false",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
@@ -64,5 +66,24 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+        "src/components/**/*.{js,jsx,ts,tsx}",
+        "src/pages/**/*.{js,jsx,ts,tsx}",
+        "!<rootDir>/node_modules/",
+        "!<rootDir>/path/to/dir/"
+    ]
+  },
+  "husky": {
+      "hooks": {
+          "pre-commit": "lint-staged"
+      }
+  },
+  "lint-staged": {
+      "*.js": [
+          "yarn lint",
+          "cross-env CI=true yarn test:coverage --bail --findRelatedTests"
+      ]
   }
 }
