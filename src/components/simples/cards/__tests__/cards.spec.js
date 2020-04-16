@@ -57,4 +57,16 @@ describe('Test Cardss', () => {
     expect(wrapper.container.textContent).toContain(data.description);
     expect(wrapper.container.textContent).toContain('Mostrar menos...');
   });
+
+  it('Should render Formation Cards with success show complete by keypress formation', () => {
+    const keyPressActionMock = jest.fn(() => {});
+    data.complete = false;
+    const wrapper = render(
+      decorator(<Cards data={data} type="formation" keyPressAction={keyPressActionMock} />),
+    );
+
+    fireEvent.keyPress(wrapper.container.lastChild.lastChild, { key: 'Enter', code: 13, charCode: 13 });
+
+    expect(keyPressActionMock).toHaveBeenCalled();
+  });
 });

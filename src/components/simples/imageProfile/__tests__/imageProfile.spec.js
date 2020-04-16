@@ -12,7 +12,11 @@ describe('Test buttons', () => {
     const keyPressActionMock = jest.fn(() => {});
 
     const wrapper = render(
-      decorator(<ImageProfile getCurriculum={getCurriculumMock} keyPressAction={keyPressActionMock} />),
+      decorator(<ImageProfile
+        getCurriculum={getCurriculumMock}
+        keyPressAction={keyPressActionMock}
+
+      />),
     );
 
     expect(wrapper.getByAltText('foto do iran').getAttribute('src')).toBe('profile.jpg');
@@ -23,10 +27,32 @@ describe('Test buttons', () => {
     const keyPressActionMock = jest.fn(() => {});
 
     const wrapper = render(
-      decorator(<ImageProfile getCurriculum={getCurriculumMock} keyPressAction={keyPressActionMock} />),
+      decorator(<ImageProfile
+        getCurriculum={getCurriculumMock}
+        keyPressAction={keyPressActionMock}
+
+      />),
     );
     fireEvent.click(wrapper.container.lastChild.firstChild);
 
     expect(getCurriculumMock).toHaveBeenCalled();
+  });
+
+  it('Shoud clicked in button by keypress ImageProfile', () => {
+    const getCurriculumMock = jest.fn(() => {});
+    const keyPressActionMock = jest.fn(() => {});
+
+    const wrapper = render(
+      decorator(<ImageProfile
+        getCurriculum={getCurriculumMock}
+        keyPressAction={keyPressActionMock}
+
+      />),
+    );
+
+    fireEvent.keyPress(wrapper.container.lastChild.firstChild, { key: 'Enter', code: 13, charCode: 13 });
+
+    expect(keyPressActionMock).toHaveBeenCalled();
+    expect(keyPressActionMock.mock.calls[0][1]).toBe(getCurriculumMock);
   });
 });

@@ -10,51 +10,56 @@ import Information from '../index';
 const decorator = (Component) => (<ThemeProvider theme={light}>{Component}</ThemeProvider>);
 
 describe('Test Information', () => {
-  it('Should render Personal Information with success', () => {
+  it('Should render Information with success', () => {
     const keyPressActionMock = jest.fn(() => {});
     const redirect = jest.fn(() => {});
 
     const wrapper = render(
-      decorator(<Information informations={informations} redirect={redirect} keyPressAction={keyPressActionMock} />),
+      decorator(<Information
+        informations={informations}
+        redirect={redirect}
+        keyPressAction={keyPressActionMock}
+      />),
     );
 
-    expect(wrapper.container.firstChild.childNodes[1].childNodes[1].data).toContain(informations[0].label);
-    expect(wrapper.container.firstChild.childNodes[1].lastChild.innerHTML).toBe(informations[0].information);
+    expect(wrapper.container.firstChild.childNodes[1].childNodes[1].data)
+      .toContain(informations[0].label);
+    expect(wrapper.container.firstChild.childNodes[1].lastChild.innerHTML)
+      .toBe(informations[0].information);
   });
-  it.skip('Should render Formation Information with success', () => {
+  it('Should render Information with success and click to link', () => {
     const keyPressActionMock = jest.fn(() => {});
+    const redirect = jest.fn(() => {});
 
     const wrapper = render(
-      decorator(<Information data={data} type="formation" keyPressAction={keyPressActionMock} />),
+      decorator(<Information
+        informations={informations}
+        redirect={redirect}
+        keyPressAction={keyPressActionMock}
+      />),
     );
 
-    expect(wrapper.container.textContent).toContain(data.name);
-    expect(wrapper.container.textContent).toContain(data.description);
-    expect(wrapper.container.textContent).toContain('Leia mais...');
+    fireEvent.click(wrapper.container.firstChild.childNodes[4].lastChild);
+
+    expect(redirect).toHaveBeenCalled();
   });
-  it.skip('Should render Formation Information with success and click', () => {
+
+  it('Should render Information with success and click to link by keypress', () => {
     const keyPressActionMock = jest.fn(() => {});
+    const redirect = jest.fn(() => {});
+
     const wrapper = render(
-      decorator(<Information data={data} type="formation" keyPressAction={keyPressActionMock} />),
+      decorator(<Information
+        informations={informations}
+        redirect={redirect}
+        keyPressAction={keyPressActionMock}
+      />),
     );
 
-    fireEvent.click(wrapper.container.lastChild.lastChild);
+    fireEvent.keyPress(wrapper.container.firstChild.childNodes[4].lastChild, { key: 'Enter', code: 13, charCode: 13 });
 
-    expect(wrapper.container.textContent).toContain(data.name);
-    expect(wrapper.container.textContent).toContain(data.description);
-    expect(wrapper.container.textContent).toContain('Mostrar menos...');
-  });
-  it.skip('Should render Formation Information with success complete formation', () => {
-    const keyPressActionMock = jest.fn(() => {});
-    data.complete = false;
-    const wrapper = render(
-      decorator(<Information data={data} type="formation" keyPressAction={keyPressActionMock} />),
-    );
-
-    fireEvent.click(wrapper.container.lastChild.lastChild);
-
-    expect(wrapper.container.textContent).toContain(data.name);
-    expect(wrapper.container.textContent).toContain(data.description);
-    expect(wrapper.container.textContent).toContain('Mostrar menos...');
+    expect(keyPressActionMock).toHaveBeenCalled();
+    expect(keyPressActionMock.mock.calls[0][1]).toBe(redirect);
+    expect(keyPressActionMock.mock.calls[0][2]).toBe(informations[3].link.type);
   });
 });

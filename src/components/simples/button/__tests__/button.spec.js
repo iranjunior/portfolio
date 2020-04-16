@@ -30,16 +30,17 @@ describe('Test buttons', () => {
     expect(getCurriculumMock).toHaveBeenCalled();
   });
 
-  it.skip('Shoud type in button and clicked', () => {
+  it('Shoud type in button and clicked', () => {
     const getCurriculumMock = jest.fn(() => {});
     const keyPressActionMock = jest.fn(() => {});
 
-    const { queryByLabelText } = render(
+    const wrapper = render(
       decorator(<Button getCurriculum={getCurriculumMock} keyPressAction={keyPressActionMock} />),
     );
 
-    fireEvent.keyDown(queryByLabelText('Click aqui para baixar meu curriculo'));
+    fireEvent.keyPress(wrapper.getByRole('button'), { key: 'Enter', code: 13, charCode: 13 });
 
     expect(keyPressActionMock).toHaveBeenCalled();
+    expect(keyPressActionMock.mock.calls[0][1]).toBe(getCurriculumMock);
   });
 });

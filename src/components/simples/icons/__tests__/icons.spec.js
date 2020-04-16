@@ -12,25 +12,39 @@ const decorator = (Component) => (<ThemeProvider theme={light}>{Component}</Them
 
 describe('Test Icons ', () => {
   it('Should render all Icons with success', () => {
-    const redirect = jest.fn(() => {});
+    const redirectMock = jest.fn(() => {});
     const keyPressAction = jest.fn(() => {});
 
     const wrapper = render(
-      decorator(<Icons icons={icons} redirect={redirect} keyPressAction={keyPressAction} />),
+      decorator(<Icons icons={icons} redirect={redirectMock} keyPressAction={keyPressAction} />),
     );
     expect(wrapper.getAllByRole('button').length).toBe(icons.length);
   });
 
   it('Should render first Icon with success and clicked', () => {
-    const redirect = jest.fn(() => {});
+    const redirectMock = jest.fn(() => {});
     const keyPressAction = jest.fn(() => {});
 
     render(
-      decorator(<Icons icons={icons} redirect={redirect} keyPressAction={keyPressAction} />),
+      decorator(<Icons icons={icons} redirect={redirectMock} keyPressAction={keyPressAction} />),
     );
 
     fireEvent.click(screen.getAllByRole('button')[0]);
 
-    expect(redirect).toHaveBeenCalled();
+    expect(redirectMock).toHaveBeenCalled();
+  });
+
+  it('Should render first Icon with success and clicked by keypress', () => {
+    const redirectMock = jest.fn(() => {});
+    const keyPressAction = jest.fn(() => {});
+
+    render(
+      decorator(<Icons icons={icons} redirect={redirectMock} keyPressAction={keyPressAction} />),
+    );
+
+    fireEvent.keyPress(screen.getAllByRole('button')[0], { key: 'Enter', code: 13, charCode: 13 });
+
+    expect(keyPressAction).toHaveBeenCalled();
+    expect(keyPressAction.mock.calls[0][1]).toBe(redirectMock);
   });
 });
