@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://iranjunior.netlify.com/sitemap.xml
+Sitemap: https://iranjunior.herokuapp.com/sitemap.xml
