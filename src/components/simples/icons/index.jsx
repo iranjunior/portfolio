@@ -8,6 +8,7 @@ const IconsComponents = ({ icons, redirect, keyPressAction }) => (
     {
         icons.map((icon) => (
           <icon.icon
+            role="button"
             tabIndex={0}
             aria-label={icon.name}
             key={icon.name}
