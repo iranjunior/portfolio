@@ -4,6 +4,8 @@ import Formation from './components/composes/formation';
 import Portfolio from './components/composes/portfolio';
 import Contate from './components/composes/contact';
 
+import NotFound from './components/simples/erros/notfound';
+
 const Routes = [
   {
     title: 'Iran Junior',
@@ -39,6 +41,12 @@ const Routes = [
     path: '/contact',
     exact: true,
     component: Contate,
+  },
+  {
+    title: 'Não encontrado',
+    path: '*',
+    exact: false,
+    component: NotFound,
   },
 ];
 export default Routes;

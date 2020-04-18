@@ -19,7 +19,7 @@ const DropdownComponent = ({
       <Menu active={active}>
         <Dropdown>
           {
-              routes.map((route) => (
+              routes.filter((route) => route.nav).map((route) => (
                 <Item
                   tabIndex={0}
                   aria-label={route.nav}
