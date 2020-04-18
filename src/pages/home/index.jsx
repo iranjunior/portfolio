@@ -1,11 +1,12 @@
-import React from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+import React, { Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { Container, Section } from './styles';
+
 import Routes from '../../routes';
-import 'react-toastify/dist/ReactToastify.css';
 
-
+import Loading from '../../components/simples/loadding';
 import Nav from '../../components/composes/nav';
 import Menu from '../../components/composes/menu';
 import Profile from '../../components/composes/profile';
@@ -32,7 +33,9 @@ const Home = () => (
     <Menu />
     <Section>
       <Profile />
-      {switchRoute}
+      <Suspense fallback={Loading}>
+        {switchRoute}
+      </Suspense>
       <ToastContainer />
     </Section>
   </Container>

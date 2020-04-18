@@ -2,9 +2,10 @@ import React, { memo } from 'react';
 import propTypes from 'prop-types';
 
 import Skill from './styles';
+import Boundary from '../erros/boundary';
 
 const SkillsComponent = ({ redirect, skills, keyPressAction }) => (
-  <>
+  <Boundary>
     {skills.map((skill) => (
       <Skill
         tabIndex={0}
@@ -16,7 +17,7 @@ const SkillsComponent = ({ redirect, skills, keyPressAction }) => (
         {skill.skill}
       </Skill>
     ))}
-  </>
+  </Boundary>
 );
 SkillsComponent.defaultProps = {
   skills: [],

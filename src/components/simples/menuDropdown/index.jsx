@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {
   Menu, Dropdown, Item,
 } from './styles';
+import Boundary from '../erros/boundary';
 
 const DropdownComponent = ({
   routes, redirect, isMyRoute, keyPressAction,
@@ -14,11 +15,11 @@ const DropdownComponent = ({
     setActive((value) => (value === 'hidden' ? 'show' : 'hidden'));
   };
   return (
-    <>
+    <Boundary>
       <Menu active={active}>
         <Dropdown>
           {
-              routes.map((route) => (
+              routes.filter((route) => route.nav).map((route) => (
                 <Item
                   tabIndex={0}
                   aria-label={route.nav}
@@ -35,7 +36,7 @@ const DropdownComponent = ({
           <Item onClick={toggleDropdown}>Menu</Item>
         </Dropdown>
       </Menu>
-    </>
+    </Boundary>
   );
 };
 
