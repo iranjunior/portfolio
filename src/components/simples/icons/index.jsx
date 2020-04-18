@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Container from './styles';
+import Boundary from '../erros/boundary';
 
 const IconsComponents = ({ icons, redirect, keyPressAction }) => (
-  <Container>
-    {
+  <Boundary>
+    <Container>
+      {
         icons.map((icon) => (
           <icon.icon
             role="button"
@@ -18,7 +20,8 @@ const IconsComponents = ({ icons, redirect, keyPressAction }) => (
           />
         ))
     }
-  </Container>
+    </Container>
+  </Boundary>
 );
 
 IconsComponents.defaultProps = {

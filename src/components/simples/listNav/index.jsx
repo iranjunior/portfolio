@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 import {
   Menu, Item,
 } from './styles';
+import Boundary from '../erros/boundary';
 
 const ListNav = ({
   routes, redirect, isMyRoute, keyPressAction,
 }) => (
-  <Menu>
-    {
-       routes.map((route) => (
+  <Boundary>
+    <Menu>
+      {
+       routes.filter((route) => route.nav).map((route) => (
          <Item
            tabIndex={0}
            aria-label={route.nav}
@@ -23,7 +25,8 @@ const ListNav = ({
          </Item>
        ))
     }
-  </Menu>
+    </Menu>
+  </Boundary>
 );
 
 

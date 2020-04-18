@@ -7,6 +7,7 @@ import {
   Card, Title, Subtitle, References, Reference, Links, CardHeader,
   CardContent, TitleCard, DateCard, Content, Decision,
 } from './styles';
+import Boundary from '../erros/boundary';
 
 const Cards = ({ data, type, keyPressAction }) => {
   const [activeContent, setActiveContent] = useState(false);
@@ -47,16 +48,18 @@ const Cards = ({ data, type, keyPressAction }) => {
     );
   }
   return (
-    <Card>
-      <CardHeader>
-        <TitleCard
-          aria-label={data.name}
-          tabIndex={0}
-        >
-          {data.name}
+    <Boundary>
 
-        </TitleCard>
-        {
+      <Card>
+        <CardHeader>
+          <TitleCard
+            aria-label={data.name}
+            tabIndex={0}
+          >
+            {data.name}
+
+          </TitleCard>
+          {
           data.complete ? (
             <DateCard
               aria-label={`Concluido em ${data.date}`}
@@ -77,23 +80,25 @@ const Cards = ({ data, type, keyPressAction }) => {
             </DateCard>
           )
         }
-      </CardHeader>
-      <CardContent active={activeContent}>
-        <Content
-          aria-label={data.description}
+        </CardHeader>
+        <CardContent active={activeContent}>
+          <Content
+            aria-label={data.description}
+            tabIndex={0}
+          >
+            {data.description}
+          </Content>
+        </CardContent>
+        <Decision
           tabIndex={0}
+          onKeyPress={(event) => keyPressAction(event, toggleActive,
+            setActiveContent, activeContent)}
+          onClick={() => toggleActive(setActiveContent, activeContent)}
         >
-          {data.description}
-        </Content>
-      </CardContent>
-      <Decision
-        tabIndex={0}
-        onKeyPress={(event) => keyPressAction(event, toggleActive, setActiveContent, activeContent)}
-        onClick={() => toggleActive(setActiveContent, activeContent)}
-      >
-        {activeContent ? 'Mostrar menos...' : 'Leia mais...'}
-      </Decision>
-    </Card>
+          {activeContent ? 'Mostrar menos...' : 'Leia mais...'}
+        </Decision>
+      </Card>
+    </Boundary>
   );
 };
 
