@@ -3,9 +3,10 @@ import Proptypes from 'prop-types';
 import {
   Strength, Front, Back,
 } from './styles';
+import Boundary from '../erros/boundary';
 
 const StrengthComponent = ({ strengths }) => (
-  <>
+  <Boundary>
     {strengths.map((strength) => (
       <Strength
         key={strength.title}
@@ -22,7 +23,7 @@ const StrengthComponent = ({ strengths }) => (
         </Back>
       </Strength>
     ))}
-  </>
+  </Boundary>
 );
 StrengthComponent.defaultProps = {
   strengths: [],

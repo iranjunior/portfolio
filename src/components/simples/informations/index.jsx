@@ -4,17 +4,20 @@ import PropTypes from 'prop-types';
 import {
   List, Item, Information,
 } from './styles';
+import Boundary from '../erros/boundary';
 
 
 const InformationsComponent = ({ informations, redirect, keyPressAction }) => (
-  <List>
-    <Item
-      tabIndex={0}
-      aria-label="Informações Gerais"
-    >
-      Informações Gerais
-    </Item>
-    {
+  <Boundary>
+
+    <List>
+      <Item
+        tabIndex={0}
+        aria-label="Informações Gerais"
+      >
+        Informações Gerais
+      </Item>
+      {
       informations.map((information) => {
         if (information.link) {
           return (
@@ -50,7 +53,8 @@ const InformationsComponent = ({ informations, redirect, keyPressAction }) => (
         );
       })
     }
-  </List>
+    </List>
+  </Boundary>
 );
 
 InformationsComponent.defaultProps = {

@@ -2,14 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Destak from './styles';
+import Boundary from '../erros/boundary';
 
 const DestakComponent = ({ message }) => (
-  <Destak
-    tabIndex={0}
-    aria-label={message}
-  >
-    {message}
-  </Destak>
+  <Boundary>
+    <Destak
+      tabIndex={0}
+      aria-label={message}
+    >
+      {message}
+    </Destak>
+  </Boundary>
 );
 
 DestakComponent.propTypes = {

@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 import {
   Menu, Item,
 } from './styles';
+import Boundary from '../erros/boundary';
 
 const ListNav = ({
   routes, redirect, isMyRoute, keyPressAction,
 }) => (
-  <Menu>
-    {
+  <Boundary>
+    <Menu>
+      {
        routes.map((route) => (
          <Item
            tabIndex={0}
@@ -23,7 +25,8 @@ const ListNav = ({
          </Item>
        ))
     }
-  </Menu>
+    </Menu>
+  </Boundary>
 );
 
 
