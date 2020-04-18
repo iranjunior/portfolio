@@ -1,10 +1,12 @@
-import About from './components/composes/about';
-import Skills from './components/composes/skills';
-import Formation from './components/composes/formation';
-import Portfolio from './components/composes/portfolio';
-import Contate from './components/composes/contact';
+import { lazy } from 'react';
 
-import NotFound from './components/simples/erros/notfound';
+const About = lazy(() => import('./components/composes/about'));
+const Skills = lazy(() => import('./components/composes/skills'));
+const Formation = lazy(() => import('./components/composes/formation'));
+const Portfolio = lazy(() => import('./components/composes/portfolio'));
+const Contate = lazy(() => import('./components/composes/contact'));
+
+const NotFound = lazy(() => import('./components/simples/erros/notfound'));
 
 const Routes = [
   {
